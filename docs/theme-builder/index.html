@@ -1,0 +1,939 @@
+<html><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" /><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" /><script async type="module" src="/assets/entry.js"></script><title>Theme Builder | Remix UI Demo</title><style data-rmx-theme="" data-rmx-theme-selector=":root">:root {
+  --rmx-space-none: 0px;
+  --rmx-space-px: 1px;
+  --rmx-space-xs: 4px;
+  --rmx-space-sm: 8px;
+  --rmx-space-md: 12px;
+  --rmx-space-lg: 16px;
+  --rmx-space-xl: 24px;
+  --rmx-space-xxl: 32px;
+  --rmx-radius-none: 0px;
+  --rmx-radius-sm: 4px;
+  --rmx-radius-md: 8px;
+  --rmx-radius-lg: 12px;
+  --rmx-radius-xl: 16px;
+  --rmx-radius-full: 9999px;
+  --rmx-font-family-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --rmx-font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --rmx-font-size-xxxs: 10px;
+  --rmx-font-size-xxs: 11px;
+  --rmx-font-size-xs: 12px;
+  --rmx-font-size-sm: 13px;
+  --rmx-font-size-md: 14px;
+  --rmx-font-size-lg: 16px;
+  --rmx-font-size-xl: 20px;
+  --rmx-font-size-xxl: 28px;
+  --rmx-line-height-tight: 1.25;
+  --rmx-line-height-normal: 1.45;
+  --rmx-line-height-relaxed: 1.65;
+  --rmx-letter-spacing-tight: -0.03em;
+  --rmx-letter-spacing-normal: 0;
+  --rmx-letter-spacing-meta: 0.06em;
+  --rmx-letter-spacing-wide: 0.08em;
+  --rmx-font-weight-normal: 400;
+  --rmx-font-weight-medium: 500;
+  --rmx-font-weight-semibold: 600;
+  --rmx-font-weight-bold: 700;
+  --rmx-control-height-sm: 28px;
+  --rmx-control-height-md: 32px;
+  --rmx-control-height-lg: 36px;
+  --rmx-surface-lvl0: #ffffff;
+  --rmx-surface-lvl1: #f8f8f8;
+  --rmx-surface-lvl2: #f5f5f5;
+  --rmx-surface-lvl3: #f3f3f3;
+  --rmx-surface-lvl4: #efefef;
+  --rmx-shadow-xs: 0 1px 1px rgb(0 0 0 / 0.05);
+  --rmx-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.07);
+  --rmx-shadow-md: 0 6px 18px rgb(0 0 0 / 0.08);
+  --rmx-shadow-lg: 0 16px 34px rgb(0 0 0 / 0.10);
+  --rmx-shadow-xl: 0 24px 52px rgb(0 0 0 / 0.14);
+  --rmx-color-text-primary: #151515;
+  --rmx-color-text-secondary: #4f4f4f;
+  --rmx-color-text-muted: #6d6d6d;
+  --rmx-color-text-link: #1A72FF;
+  --rmx-color-border-subtle: #e7e7e7;
+  --rmx-color-border-default: #d1d1d1;
+  --rmx-color-border-strong: #b0b0b0;
+  --rmx-color-focus-ring: #1A72FF;
+  --rmx-color-overlay-scrim: rgb(0 0 0 / 0.28);
+  --rmx-color-action-primary-background: #1A72FF;
+  --rmx-color-action-primary-background-hover: #1463e0;
+  --rmx-color-action-primary-background-active: #0f55c9;
+  --rmx-color-action-primary-foreground: rgb(255 255 255 / 0.92);
+  --rmx-color-action-primary-border: #1A72FF;
+  --rmx-color-action-secondary-background: #ffffff;
+  --rmx-color-action-secondary-background-hover: #fbfbfb;
+  --rmx-color-action-secondary-background-active: #f3f3f3;
+  --rmx-color-action-secondary-foreground: #202020;
+  --rmx-color-action-secondary-border: #d1d1d1;
+  --rmx-color-action-danger-background: #FF3000;
+  --rmx-color-action-danger-background-hover: #e12b00;
+  --rmx-color-action-danger-background-active: #c52600;
+  --rmx-color-action-danger-foreground: rgb(255 255 255 / 0.92);
+  --rmx-color-action-danger-border: #FF3000;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+}
+
+body {
+  font-family: var(--rmx-font-family-sans);
+  font-size: var(--rmx-font-size-md);
+  line-height: var(--rmx-line-height-normal);
+  color: var(--rmx-color-text-primary);
+  background-color: var(--rmx-surface-lvl0);
+}
+
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl, figure, blockquote) {
+  margin: 0;
+}
+
+:where(img, svg) {
+  display: block;
+}</style><style data-rmx="rmxc-gaynph">@layer rmx.rmxc-gaynph { .rmxc-gaynph {
+  margin: 0;
+  background-color: var(--rmx-surface-lvl0);
+} }</style><style data-rmx="rmxc-9ru0zn">@layer rmx.rmxc-9ru0zn { .rmxc-9ru0zn {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  min-height: 100vh;
+  color: var(--rmx-color-text-primary);
+  background-color: var(--rmx-surface-lvl0);
+  font-family: var(--rmx-font-family-sans);
+}
+@media (max-width: 1100px) {
+  .rmxc-9ru0zn {
+    grid-template-columns: 1fr;
+  }
+} }</style><style data-rmx="rmxc-kebhhz">@layer rmx.rmxc-kebhhz { .rmxc-kebhhz {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--rmx-space-lg);
+  height: 100vh;
+  min-width: 0;
+  padding: var(--rmx-space-lg);
+  box-sizing: border-box;
+  border-right: 1px solid var(--rmx-color-border-subtle);
+  background-color: var(--rmx-surface-lvl0);
+  overflow: hidden visible;
+}
+@media (max-width: 1100px) {
+  .rmxc-kebhhz {
+    position: static;
+    height: auto;
+    max-height: 32rem;
+    border-right: none;
+    border-bottom: 1px solid var(--rmx-color-border-subtle);
+  }
+} }</style><style data-rmx="rmxc-vzinc0">@layer rmx.rmxc-vzinc0 { .rmxc-vzinc0 {
+  position: sticky;
+  top: calc(var(--rmx-space-lg) * -1);
+  z-index: 1;
+  display: grid;
+  gap: var(--rmx-space-sm);
+  margin: calc(var(--rmx-space-lg) * -1) calc(var(--rmx-space-lg) * -1) 0;
+  padding: var(--rmx-space-lg);
+  background-color: var(--rmx-surface-lvl0);
+  border-bottom: 1px solid var(--rmx-color-border-subtle);
+} }</style><style data-rmx="rmxc-boaut3">@layer rmx.rmxc-boaut3 { .rmxc-boaut3 {
+  margin: 0;
+  color: var(--rmx-color-text-muted);
+  font-size: var(--rmx-font-size-xxxs);
+  font-weight: var(--rmx-font-weight-semibold);
+  letter-spacing: var(--rmx-letter-spacing-meta);
+  line-height: var(--rmx-line-height-normal);
+  text-transform: uppercase;
+} }</style><style data-rmx="rmxc-am4t5">@layer rmx.rmxc-am4t5 { .rmxc-am4t5 {
+  margin: 0;
+  color: var(--rmx-color-text-primary);
+  font-size: var(--rmx-font-size-lg);
+  font-weight: var(--rmx-font-weight-semibold);
+  line-height: var(--rmx-line-height-tight);
+} }</style><style data-rmx="rmxc-jgmsmy">@layer rmx.rmxc-jgmsmy { .rmxc-jgmsmy {
+  margin: 0;
+  color: var(--rmx-color-text-secondary);
+  font-size: var(--rmx-font-size-sm);
+  line-height: var(--rmx-line-height-relaxed);
+} }</style><style data-rmx="rmxc-olqvb4">@layer rmx.rmxc-olqvb4 { .rmxc-olqvb4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--rmx-space-sm);
+} }</style><style data-rmx="rmxc-ksev4u">@layer rmx.rmxc-ksev4u { .rmxc-ksev4u {
+  --rmx-button-label-padding-inline: var(--rmx-space-xs);
+  all: unset;
+  box-sizing: border-box;
+  cursor: revert;
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: var(--rmx-radius-full);
+  font-family: var(--rmx-font-family-sans);
+  min-height: var(--rmx-control-height-sm);
+  padding-inline: var(--rmx-space-md);
+  font-size: var(--rmx-font-size-xs);
+  line-height: 1;
+  font-weight: var(--rmx-font-weight-medium);
+  white-space: nowrap;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+} }</style><style data-rmx="rmxc-q1stkb">@layer rmx.rmxc-q1stkb { .rmxc-q1stkb {
+  background-color: var(--rmx-color-action-secondary-background);
+  background-image: linear-gradient(to bottom, color-mix(in oklab, white 18%, var(--rmx-color-action-secondary-background)) 0%, var(--rmx-color-action-secondary-background) 100%);
+  color: var(--rmx-color-action-secondary-foreground);
+  border: 0.5px solid color-mix(in oklab, var(--rmx-color-action-secondary-border) 74%, black);
+  box-shadow: inset 0 1px 0 color-mix(in oklab, white 16%, var(--rmx-color-action-secondary-background)), var(--rmx-shadow-xs), var(--rmx-shadow-sm);
+  &:hover {
+    background-color: var(--rmx-color-action-secondary-background-hover);
+    background-image: linear-gradient(to bottom, color-mix(in oklab, white 18%, var(--rmx-color-action-secondary-background-hover)) 0%, var(--rmx-color-action-secondary-background-hover) 100%);
+    border-color: color-mix(in oklab, var(--rmx-color-action-secondary-background-hover) 74%, black);
+  }
+  &:active {
+    background-color: var(--rmx-color-action-secondary-background-active);
+    background-image: linear-gradient(to bottom, color-mix(in oklab, white 18%, var(--rmx-color-action-secondary-background-active)) 0%, var(--rmx-color-action-secondary-background-active) 100%);
+    border-color: color-mix(in oklab, var(--rmx-color-action-secondary-background-active) 74%, black);
+    box-shadow: inset 0 1px 0 color-mix(in oklab, white 12%, var(--rmx-color-action-secondary-background-active)), var(--rmx-shadow-xs);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--rmx-color-focus-ring);
+    outline-offset: 2px;
+  }
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+} }</style><style data-rmx="rmxc-pmh8mc">@layer rmx.rmxc-pmh8mc { .rmxc-pmh8mc {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+  padding-inline: var(--rmx-button-label-padding-inline);
+} }</style><style data-rmx="rmxc-ks2ne9">@layer rmx.rmxc-ks2ne9 { .rmxc-ks2ne9 {
+  background-color: var(--rmx-color-action-primary-background);
+  background-image: linear-gradient(to bottom, color-mix(in oklab, white 18%, var(--rmx-color-action-primary-background)) 0%, var(--rmx-color-action-primary-background) 100%);
+  color: var(--rmx-color-action-primary-foreground);
+  border: 0.5px solid color-mix(in oklab, var(--rmx-color-action-primary-border) 74%, black);
+  box-shadow: inset 0 1px 0 color-mix(in oklab, white 16%, var(--rmx-color-action-primary-background)), var(--rmx-shadow-xs), var(--rmx-shadow-sm);
+  &:hover {
+    background-color: var(--rmx-color-action-primary-background-hover);
+    background-image: linear-gradient(to bottom, color-mix(in oklab, white 18%, var(--rmx-color-action-primary-background-hover)) 0%, var(--rmx-color-action-primary-background-hover) 100%);
+    border-color: color-mix(in oklab, var(--rmx-color-action-primary-background-hover) 74%, black);
+  }
+  &:active {
+    background-color: var(--rmx-color-action-primary-background-active);
+    background-image: linear-gradient(to bottom, color-mix(in oklab, white 18%, var(--rmx-color-action-primary-background-active)) 0%, var(--rmx-color-action-primary-background-active) 100%);
+    border-color: color-mix(in oklab, var(--rmx-color-action-primary-background-active) 74%, black);
+    box-shadow: inset 0 1px 0 color-mix(in oklab, white 12%, var(--rmx-color-action-primary-background-active)), var(--rmx-shadow-xs);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--rmx-color-focus-ring);
+    outline-offset: 2px;
+  }
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+} }</style><style data-rmx="rmxc-kouzop">@layer rmx.rmxc-kouzop { .rmxc-kouzop {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+} }</style><style data-rmx="rmxc-7s5f80">@layer rmx.rmxc-7s5f80 { .rmxc-7s5f80 {
+  min-width: 0;
+} }</style><style data-rmx="rmxc-ysageh">@layer rmx.rmxc-ysageh { .rmxc-ysageh {
+  border-top: 1px solid var(--rmx-color-border-subtle);
+  &:first-child {
+    border-top: 0;
+  }
+} }</style><style data-rmx="rmxc-kra4l5">@layer rmx.rmxc-kra4l5 { .rmxc-kra4l5 {
+  all: unset;
+  box-sizing: border-box;
+  cursor: revert;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--rmx-space-md);
+  width: 100%;
+  min-height: var(--rmx-control-height-lg);
+  padding: var(--rmx-space-md) 0;
+  color: var(--rmx-color-text-primary);
+  font-family: var(--rmx-font-family-sans);
+  font-size: var(--rmx-font-size-sm);
+  line-height: var(--rmx-line-height-normal);
+  font-weight: var(--rmx-font-weight-medium);
+  text-align: left;
+  &:hover:not(:disabled) {
+    background-color: var(--rmx-surface-lvl1);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--rmx-color-focus-ring);
+    outline-offset: 2px;
+  }
+  &:disabled {
+    opacity: 0.55;
+  }
+  & > span:first-child {
+    min-width: 0;
+  }
+} }</style><style data-rmx="rmxc-n79xi4">@layer rmx.rmxc-n79xi4 { .rmxc-n79xi4 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--rmx-font-size-sm);
+  height: var(--rmx-font-size-sm);
+  color: var(--rmx-color-text-muted);
+  transition: transform 350ms linear(0, 0.0132 1.6%, 0.0471 3.1%, 0.0949 4.7%, 0.1514 6.3%, 0.3993 12.5%, 0.5123 15.6%, 0.6104 18.8%, 0.6927 21.9%, 0.7601 25%, 0.8142 28.1%, 0.8572 31.3%, 0.8909 34.4%, 0.9171 37.5%, 0.9372 40.6%, 0.9527 43.8%, 0.9734 50%, 0.9852 56.3%, 0.9918 62.5%, 0.9976 75%, 1);
+  & > svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  &[data-state="open"] {
+    transform: rotate(90deg);
+  }
+} }</style><style data-rmx="rmxc-jymand">@layer rmx.rmxc-jymand { .rmxc-jymand {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 350ms linear(0, 0.0132 1.6%, 0.0471 3.1%, 0.0949 4.7%, 0.1514 6.3%, 0.3993 12.5%, 0.5123 15.6%, 0.6104 18.8%, 0.6927 21.9%, 0.7601 25%, 0.8142 28.1%, 0.8572 31.3%, 0.8909 34.4%, 0.9171 37.5%, 0.9372 40.6%, 0.9527 43.8%, 0.9734 50%, 0.9852 56.3%, 0.9918 62.5%, 0.9976 75%, 1);
+  &[data-state="open"] {
+    grid-template-rows: 1fr;
+  }
+  &[data-state="closed"] {
+    pointer-events: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rmxc-jymand {
+    transition: none;
+  }
+} }</style><style data-rmx="rmxc-xicfcp">@layer rmx.rmxc-xicfcp { .rmxc-xicfcp {
+  min-height: 0;
+  overflow: hidden;
+} }</style><style data-rmx="rmxc-alkc0w">@layer rmx.rmxc-alkc0w { .rmxc-alkc0w {
+  display: flow-root;
+  min-height: 0;
+  padding-bottom: var(--rmx-space-md);
+  color: var(--rmx-color-text-secondary);
+  font-size: var(--rmx-font-size-sm);
+  line-height: var(--rmx-line-height-relaxed);
+  & > :first-child {
+    margin-top: 0;
+  }
+  & > :last-child {
+    margin-bottom: 0;
+  }
+} }</style><style data-rmx="rmxc-sqiqrr">@layer rmx.rmxc-sqiqrr { .rmxc-sqiqrr {
+  display: grid;
+  gap: var(--rmx-space-sm);
+} }</style><style data-rmx="rmxc-56f2xg">@layer rmx.rmxc-56f2xg { .rmxc-56f2xg {
+  display: grid;
+  gap: var(--rmx-space-xs);
+  min-width: 0;
+} }</style><style data-rmx="rmxc-xlgzpf">@layer rmx.rmxc-xlgzpf { .rmxc-xlgzpf {
+  color: var(--rmx-color-text-secondary);
+  font-family: var(--rmx-font-family-mono);
+  font-size: var(--rmx-font-size-xxs);
+} }</style><style data-rmx="rmxc-iuhf2s">@layer rmx.rmxc-iuhf2s { .rmxc-iuhf2s {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--rmx-space-xs);
+  align-items: center;
+  min-width: 0;
+  & input[type="range"] {
+    grid-column: 1 / -1;
+  }
+} }</style><style data-rmx="rmxc-l6x26m">@layer rmx.rmxc-l6x26m { .rmxc-l6x26m {
+  width: var(--rmx-control-height-md);
+  height: var(--rmx-control-height-md);
+  padding: 2px;
+  border: 1px solid var(--rmx-color-border-default);
+  border-radius: var(--rmx-radius-md);
+  background-color: var(--rmx-surface-lvl0);
+  &::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+  &::-webkit-color-swatch {
+    border: 0;
+    border-radius: calc(var(--rmx-radius-md) - 3px);
+  }
+} }</style><style data-rmx="rmxc-84qeak">@layer rmx.rmxc-84qeak { .rmxc-84qeak {
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: var(--rmx-control-height-md);
+  padding-inline: var(--rmx-space-sm);
+  border: 1px solid var(--rmx-color-border-default);
+  border-radius: var(--rmx-radius-md);
+  background-color: var(--rmx-surface-lvl0);
+  color: var(--rmx-color-text-primary);
+  font-family: var(--rmx-font-family-mono);
+  font-size: var(--rmx-font-size-xs);
+  &:focus-visible {
+    outline: 2px solid var(--rmx-color-focus-ring);
+    outline-offset: 0;
+  }
+} }</style><style data-rmx="rmxc-t4cb3d">@layer rmx.rmxc-t4cb3d { .rmxc-t4cb3d {
+  min-width: 0;
+  width: 100%;
+  accent-color: var(--rmx-color-action-primary-background);
+} }</style><style data-rmx="rmxc-3ctjis">@layer rmx.rmxc-3ctjis { .rmxc-3ctjis {
+  min-width: 0;
+  padding: var(--rmx-space-xxl);
+  box-sizing: border-box;
+  background-color: var(--rmx-surface-lvl1);
+  color: var(--rmx-color-text-primary);
+}
+@media (max-width: 760px) {
+  .rmxc-3ctjis {
+    padding: var(--rmx-space-lg);
+  }
+} }</style><style data-rmx="rmxc-v3725d">@layer rmx.rmxc-v3725d { .rmxc-v3725d {
+  display: grid;
+  gap: var(--rmx-space-xl);
+} }</style><style data-rmx="rmxc-rs04h6">@layer rmx.rmxc-rs04h6 { .rmxc-rs04h6 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 28rem));
+  gap: var(--rmx-space-lg);
+} }</style><style data-rmx="rmxc-charqp">@layer rmx.rmxc-charqp { .rmxc-charqp {
+  display: grid;
+  align-content: start;
+  gap: var(--rmx-space-lg);
+  min-height: 15rem;
+  padding: var(--rmx-space-lg);
+  border-radius: var(--rmx-radius-lg);
+  background-color: var(--rmx-surface-lvl0);
+} }</style><style data-rmx="rmxc-v71maw">@layer rmx.rmxc-v71maw { .rmxc-v71maw {
+  display: grid;
+  gap: var(--rmx-space-xs);
+} }</style><style data-rmx="rmxc-nk7fh9">@layer rmx.rmxc-nk7fh9 { .rmxc-nk7fh9 {
+  min-width: 0;
+  padding: var(--rmx-space-xs);
+  margin: calc(var(--rmx-space-xs) * -1);
+} }</style><style data-rmx="rmxc-e2y2oj">@layer rmx.rmxc-e2y2oj { .rmxc-e2y2oj {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--rmx-space-sm);
+} }</style><style data-rmx="rmxc-scxg5a">@layer rmx.rmxc-scxg5a { .rmxc-scxg5a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  & > svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+} }</style><style data-rmx="rmxc-6lftcu">@layer rmx.rmxc-6lftcu { .rmxc-6lftcu {
+  background-color: transparent;
+  background-image: none;
+  color: var(--rmx-color-text-secondary);
+  border: 0.5px solid transparent;
+  box-shadow: none;
+  &:hover {
+    background-color: var(--rmx-surface-lvl3);
+    color: var(--rmx-color-text-primary);
+  }
+  &:active {
+    background-color: color-mix(in oklab, var(--rmx-surface-lvl3) 94%, black);
+    color: color-mix(in oklab, var(--rmx-color-text-primary) 94%, black);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--rmx-color-focus-ring);
+    outline-offset: 2px;
+    background-color: var(--rmx-surface-lvl3);
+    color: var(--rmx-color-text-primary);
+  }
+  &:disabled {
+    opacity: 0.6;
+  }
+} }</style><style data-rmx="rmxc-58m8ns">@layer rmx.rmxc-58m8ns { .rmxc-58m8ns {
+  background-color: var(--rmx-color-action-danger-background);
+  background-image: linear-gradient(to bottom, color-mix(in oklab, white 18%, var(--rmx-color-action-danger-background)) 0%, var(--rmx-color-action-danger-background) 100%);
+  color: var(--rmx-color-action-danger-foreground);
+  border: 0.5px solid color-mix(in oklab, var(--rmx-color-action-danger-border) 74%, black);
+  box-shadow: inset 0 1px 0 color-mix(in oklab, white 16%, var(--rmx-color-action-danger-background)), var(--rmx-shadow-xs), var(--rmx-shadow-sm);
+  &:hover {
+    background-color: var(--rmx-color-action-danger-background-hover);
+    background-image: linear-gradient(to bottom, color-mix(in oklab, white 18%, var(--rmx-color-action-danger-background-hover)) 0%, var(--rmx-color-action-danger-background-hover) 100%);
+    border-color: color-mix(in oklab, var(--rmx-color-action-danger-background-hover) 74%, black);
+  }
+  &:active {
+    background-color: var(--rmx-color-action-danger-background-active);
+    background-image: linear-gradient(to bottom, color-mix(in oklab, white 18%, var(--rmx-color-action-danger-background-active)) 0%, var(--rmx-color-action-danger-background-active) 100%);
+    border-color: color-mix(in oklab, var(--rmx-color-action-danger-background-active) 74%, black);
+    box-shadow: inset 0 1px 0 color-mix(in oklab, white 12%, var(--rmx-color-action-danger-background-active)), var(--rmx-shadow-xs);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--rmx-color-focus-ring);
+    outline-offset: 2px;
+  }
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+} }</style><style data-rmx="rmxc-313p37">@layer rmx.rmxc-313p37 { .rmxc-313p37 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--rmx-space-xs) var(--rmx-space-sm);
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+} }</style><style data-rmx="rmxc-en52ll">@layer rmx.rmxc-en52ll { .rmxc-en52ll {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+} }</style><style data-rmx="rmxc-iquopg">@layer rmx.rmxc-iquopg { .rmxc-iquopg {
+  color: var(--rmx-color-text-secondary);
+  font-size: var(--rmx-font-size-sm);
+  line-height: var(--rmx-line-height-normal);
+  text-decoration: none;
+  white-space: nowrap;
+  &:hover {
+    color: var(--rmx-color-text-primary);
+  }
+} }</style><style data-rmx="rmxc-2ae3u2">@layer rmx.rmxc-2ae3u2 { .rmxc-2ae3u2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: var(--rmx-font-size-sm);
+  height: var(--rmx-font-size-sm);
+  color: var(--rmx-color-text-muted);
+} }</style><style data-rmx="rmxc-vxvddv">@layer rmx.rmxc-vxvddv { .rmxc-vxvddv {
+  color: var(--rmx-color-text-primary);
+  font-size: var(--rmx-font-size-sm);
+  line-height: var(--rmx-line-height-normal);
+  font-weight: var(--rmx-font-weight-medium);
+  white-space: nowrap;
+} }</style><style data-rmx="rmxc-nr95e1">@layer rmx.rmxc-nr95e1 { .rmxc-nr95e1 {
+  color: var(--rmx-color-text-primary);
+  font-size: var(--rmx-font-size-xs);
+  font-weight: var(--rmx-font-weight-semibold);
+} }</style><style data-rmx="rmxc-1ntvn4">@layer rmx.rmxc-1ntvn4 { .rmxc-1ntvn4 {
+  min-height: var(--rmx-control-height-sm);
+  width: 100%;
+  padding-inline: var(--rmx-space-md);
+  padding-inline-end: var(--rmx-space-sm);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--rmx-space-sm);
+  border-radius: var(--rmx-radius-md);
+  background-image: none;
+  border: 0.5px solid transparent;
+  box-shadow: none;
+  font-size: var(--rmx-font-size-xs);
+  text-align: left;
+  background-color: var(--rmx-surface-lvl3);
+  color: var(--rmx-color-text-secondary);
+  &:hover, &:focus-visible, &[aria-expanded="true"], &[aria-expanded="true"]:hover, &[aria-expanded="true"]:focus-visible {
+    background-color: var(--rmx-surface-lvl4);
+    color: var(--rmx-color-text-primary);
+  }
+  &:active {
+    background-color: var(--rmx-surface-lvl3);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--rmx-color-focus-ring);
+    outline-offset: 2px;
+  }
+  &:disabled {
+    opacity: 0.6;
+  }
+} }</style><style data-rmx="rmxc-2lytga">@layer rmx.rmxc-2lytga { .rmxc-2lytga {
+  width: min(100%, 18rem);
+} }</style><style data-rmx="rmxc-3ghnya">@layer rmx.rmxc-3ghnya { .rmxc-3ghnya {
+  position: fixed;
+  inset: auto;
+  margin: 0;
+  padding: var(--rmx-space-none);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 12rem;
+  max-width: min(24rem, calc(100vw - (var(--rmx-space-lg) * 2)));
+  max-height: 50dvh;
+  border: 1px solid var(--rmx-color-border-subtle);
+  border-radius: var(--rmx-radius-lg);
+  background-color: var(--rmx-surface-lvl0);
+  color: var(--rmx-color-text-primary);
+  overflow: hidden;
+  box-shadow: var(--rmx-shadow-xs), var(--rmx-shadow-md);
+  &::backdrop {
+    background: transparent;
+  }
+} }</style><style data-rmx="rmxc-7prw8y">@layer rmx.rmxc-7prw8y { .rmxc-7prw8y {
+  opacity: 0;
+  &:popover-open {
+    opacity: 1;
+  }
+  &:not(:popover-open) {
+    pointer-events: none;
+    transition: opacity 180ms ease-in, overlay 180ms ease-in, display 180ms ease-in;
+    transition-behavior: allow-discrete;
+  }
+} }</style><style data-rmx="rmxc-csveyg">@layer rmx.rmxc-csveyg { .rmxc-csveyg {
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: var(--rmx-space-xs);
+  overflow: auto;
+  overscroll-behavior: contain;
+} }</style><style data-rmx="rmxc-d2dnz2">@layer rmx.rmxc-d2dnz2 { .rmxc-d2dnz2 {
+  display: flex;
+  flex-direction: column;
+  outline: none;
+  user-select: none;
+  -webkit-user-select: none;
+  --rmx-ui-item-inset: var(--rmx-space-sm);
+  --rmx-ui-item-indicator-gap: var(--rmx-space-xs);
+  --rmx-ui-item-indicator-width: var(--rmx-font-size-sm);
+} }</style><style data-rmx="rmxc-vgm8um">@layer rmx.rmxc-vgm8um { .rmxc-vgm8um {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  align-items: center;
+  width: 100%;
+  min-height: var(--rmx-control-height-md);
+  padding: var(--rmx-space-xs) var(--rmx-space-sm);
+  border-radius: var(--rmx-radius-md);
+  background-color: transparent;
+  color: var(--rmx-color-text-primary);
+  font-family: var(--rmx-font-family-sans);
+  font-size: var(--rmx-font-size-sm);
+  font-weight: var(--rmx-font-weight-normal);
+  line-height: var(--rmx-line-height-normal);
+  text-align: left;
+  user-select: none;
+  -webkit-user-select: none;
+  scroll-margin-block: var(--rmx-space-xs);
+  --rmx-listbox-option-indicator-opacity: 0;
+  &:focus {
+    outline: none;
+  }
+  &[data-highlighted="true"] {
+    background-color: var(--rmx-color-action-primary-background);
+    color: var(--rmx-color-action-primary-foreground);
+  }
+  &[aria-disabled="true"] {
+    opacity: 0.5;
+  }
+  &[hidden] {
+    display: none;
+  }
+  &[data-listbox-flash="true"], &[data-select-flash="true"], &[data-combobox-flash="true"] {
+    background-color: transparent;
+    color: var(--rmx-color-text-primary);
+  }
+  &[aria-selected="true"] {
+    --rmx-listbox-option-indicator-opacity: 1;
+  }
+} }</style><style data-rmx="rmxc-vtayqe">@layer rmx.rmxc-vtayqe { .rmxc-vtayqe {
+  grid-column: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+  color: currentColor;
+  flex-shrink: 0;
+  opacity: var(--rmx-listbox-option-indicator-opacity);
+  & > svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+} }</style><style data-rmx="rmxc-vtco96">@layer rmx.rmxc-vtco96 { .rmxc-vtco96 {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+  padding-inline: var(--rmx-space-xs);
+  -webkit-user-select: none;
+} }</style><style data-rmx="rmxc-fk4bkm">@layer rmx.rmxc-fk4bkm { .rmxc-fk4bkm {
+  min-height: var(--rmx-control-height-sm);
+  width: 100%;
+  padding-inline: var(--rmx-space-sm);
+  border: 0.5px solid var(--rmx-color-border-default);
+  border-radius: var(--rmx-radius-md);
+  background-color: var(--rmx-surface-lvl0);
+  color: var(--rmx-color-text-primary);
+  font-family: var(--rmx-font-family-sans);
+  font-size: var(--rmx-font-size-sm);
+  line-height: var(--rmx-line-height-normal);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.7);
+  &:focus-visible {
+    outline: 2px solid var(--rmx-color-focus-ring);
+    outline-offset: var(--rmx-space-none);
+  }
+  &[data-surface-visible="true"][aria-activedescendant]:focus-visible {
+    outline: none;
+  }
+} }</style><style data-rmx="rmxc-925a1">@layer rmx.rmxc-925a1 { .rmxc-925a1 {
+  opacity: 0;
+  &:popover-open {
+    opacity: 1;
+  }
+  &:not(:popover-open) {
+    pointer-events: none;
+  }
+  &[data-show-reason="nav"]:not(:popover-open) {
+    transition: opacity 180ms ease-in, overlay 180ms ease-in, display 180ms ease-in;
+    transition-behavior: allow-discrete;
+  }
+  &[data-show-reason="hint"]:not(:popover-open) {
+    transition: none;
+    transition-behavior: normal;
+  }
+} }</style><style data-rmx="rmxc-w2zsjf">@layer rmx.rmxc-w2zsjf { .rmxc-w2zsjf {
+  margin: 0;
+  color: var(--rmx-color-text-secondary);
+  font-family: var(--rmx-font-family-mono);
+  font-size: var(--rmx-font-size-xs);
+} }</style><style data-rmx="rmxc-mtu39i">@layer rmx.rmxc-mtu39i { .rmxc-mtu39i {
+  padding: var(--rmx-space-xs);
+  border: 1px solid var(--rmx-color-border-subtle);
+  border-radius: var(--rmx-radius-lg);
+  background-color: var(--rmx-surface-lvl0);
+} }</style><style data-rmx="rmxc-8p9il2">@layer rmx.rmxc-8p9il2 { .rmxc-8p9il2 {
+  display: flex;
+  align-items: start;
+  gap: var(--rmx-space-xs);
+  min-width: 0;
+} }</style><style data-rmx="rmxc-wfz2il">@layer rmx.rmxc-wfz2il { .rmxc-wfz2il {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  padding-block: var(--rmx-space-xs);
+  padding-inline: var(--rmx-space-none);
+  overflow: auto;
+  overscroll-behavior: contain;
+  outline: none;
+  user-select: none;
+  -webkit-user-select: none;
+  --rmx-ui-item-inset: calc(var(--rmx-space-sm) + var(--rmx-space-xs));
+  --rmx-ui-item-indicator-gap: var(--rmx-menu-item-slot-gap);
+  --rmx-ui-item-indicator-width: var(--rmx-menu-item-slot-width);
+  --rmx-menu-item-slot-gap: var(--rmx-space-none);
+  --rmx-menu-item-slot-width: var(--rmx-space-none);
+  &:has(> [role="menuitemcheckbox"]) {
+    --rmx-menu-item-slot-gap: var(--rmx-space-xs);
+    --rmx-menu-item-slot-width: var(--rmx-font-size-md);
+  }
+  &:has(> [role="menuitemradio"]) {
+    --rmx-menu-item-slot-gap: var(--rmx-space-xs);
+    --rmx-menu-item-slot-width: var(--rmx-font-size-md);
+  }
+} }</style><style data-rmx="rmxc-74x79f">@layer rmx.rmxc-74x79f { .rmxc-74x79f {
+  min-width: 10rem;
+  border: 1px solid var(--rmx-color-border-subtle);
+  border-radius: var(--rmx-radius-lg);
+  background-color: var(--rmx-surface-lvl0);
+  box-shadow: var(--rmx-shadow-xs), var(--rmx-shadow-md);
+} }</style><style data-rmx="rmxc-vu0ok0">@layer rmx.rmxc-vu0ok0 { .rmxc-vu0ok0 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  min-height: var(--rmx-control-height-md);
+  box-sizing: border-box;
+  position: relative;
+  isolation: isolate;
+  padding-inline: calc(var(--rmx-space-sm) + var(--rmx-space-xs));
+  color: var(--rmx-color-text-primary);
+  font-family: var(--rmx-font-family-sans);
+  font-size: var(--rmx-font-size-sm);
+  font-weight: var(--rmx-font-weight-normal);
+  line-height: var(--rmx-line-height-normal);
+  text-align: left;
+  user-select: none;
+  -webkit-user-select: none;
+  --rmx-menu-item-indicator-opacity: 0;
+  &::before {
+    content: "";
+    position: absolute;
+    inset-block: 0;
+    inset-inline: var(--rmx-space-xs);
+    border-radius: var(--rmx-radius-md);
+    background-color: transparent;
+    pointer-events: none;
+    z-index: -1;
+  }
+  &:focus {
+    outline: none;
+  }
+  &[data-highlighted="true"] {
+    color: var(--rmx-color-action-primary-foreground);
+  }
+  &[data-highlighted="true"]::before {
+    background-color: var(--rmx-color-action-primary-background);
+  }
+  &[aria-haspopup="menu"][aria-expanded="true"]:not(:focus) {
+    color: var(--rmx-color-text-primary);
+  }
+  &[aria-haspopup="menu"][aria-expanded="true"]:not(:focus)::before {
+    background-color: var(--rmx-surface-lvl2);
+  }
+  &[data-submenu-state="selecting"], &[data-submenu-state="dismissing"] {
+    color: var(--rmx-color-text-primary);
+  }
+  &[data-submenu-state="selecting"]::before, &[data-submenu-state="dismissing"]::before {
+    background-color: var(--rmx-surface-lvl2);
+  }
+  &[data-menu-flash="true"] {
+    color: var(--rmx-color-text-primary);
+  }
+  &[data-menu-flash="true"]::before {
+    background-color: transparent;
+  }
+  &[aria-disabled="true"] {
+    opacity: 0.5;
+  }
+  &[aria-checked="true"], &[aria-selected="true"] {
+    --rmx-menu-item-indicator-opacity: 1;
+  }
+} }</style><style data-rmx="rmxc-gugyud">@layer rmx.rmxc-gugyud { .rmxc-gugyud {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 var(--rmx-menu-item-slot-width);
+  width: var(--rmx-menu-item-slot-width);
+  min-width: 0;
+  margin-inline-end: var(--rmx-menu-item-slot-gap);
+  overflow: hidden;
+} }</style><style data-rmx="rmxc-7sc2e7">@layer rmx.rmxc-7sc2e7 { .rmxc-7sc2e7 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--rmx-font-size-md);
+  height: var(--rmx-font-size-md);
+  color: currentColor;
+  flex-shrink: 0;
+  opacity: var(--rmx-menu-item-indicator-opacity);
+  & > svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+} }</style><style data-rmx="rmxc-cvurn">@layer rmx.rmxc-cvurn { .rmxc-cvurn {
+  display: inline-flex;
+  align-items: center;
+  flex: 1 1 auto;
+  min-width: 0;
+} }</style><style data-rmx="rmxc-k21qxx">@layer rmx.rmxc-k21qxx { .rmxc-k21qxx {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--rmx-font-size-md);
+  height: var(--rmx-font-size-md);
+  color: currentColor;
+  flex-shrink: 0;
+  margin-inline-start: auto;
+  & > svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+} }</style><style data-rmx="rmxc-73uhcz">@layer rmx.rmxc-73uhcz { .rmxc-73uhcz {
+  &[data-menu-submenu="true"][data-anchor-placement^="right"] {
+    margin-left: calc(var(--rmx-space-xs) * -1);
+  }
+  &[data-menu-submenu="true"][data-anchor-placement^="left"] {
+    margin-left: var(--rmx-space-xs);
+  }
+  &[data-close-animation="none"]:not(:popover-open) {
+    transition: none;
+    transition-behavior: normal;
+  }
+} }</style><style data-rmx="rmxc-7eydem">@layer rmx.rmxc-7eydem { .rmxc-7eydem {
+  margin-top: calc(var(--rmx-control-height-md) * 2);
+} }</style><style data-rmx="rmxc-15ov44">@layer rmx.rmxc-15ov44 { .rmxc-15ov44 {
+  display: grid;
+  gap: var(--rmx-space-md);
+  width: 18rem;
+  padding: var(--rmx-space-lg);
+} }</style></head><body class="rmxc-gaynph"><svg aria-hidden focusable="false" height="0" style="position: absolute; width: 0; height: 0; overflow: hidden; pointer-events: none;" width="0" xmlns="http://www.w3.org/2000/svg"><symbol viewBox="0 0 16 16" id="rmx-glyph-add"><path d="M8 3.25v9.5M3.25 8h9.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-alert"><path d="M8 2.5 13.75 12.5H2.25Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path><path d="M8 5.75v3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path><circle cx="8" cy="11.25" fill="currentColor" r="0.75"></circle></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-check"><path d="m3.5 8.25 2.75 2.75L12.5 4.75" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-chevronDown"><path d="m3.75 6.25 4.25 4 4.25-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-chevronVertical"><path d="m3.75 6.5 4.25-4 4.25 4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="m3.75 9.5 4.25 4 4.25-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-chevronUp"><path d="m3.75 9.75 4.25-4 4.25 4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-chevronRight"><path d="m6 4 4 4-4 4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-close"><path d="m4.5 4.5 7 7m0-7-7 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-copy"><rect x="5.25" y="3.25" width="7.5" height="7.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"></rect><path d="M10.75 12.75h-5.5a2 2 0 0 1-2-2v-5.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-edit"><path d="m10.75 3.75 1.5 1.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="m4 12 2.5-.5 5.75-5.75a1.06 1.06 0 0 0 0-1.5l-.5-.5a1.06 1.06 0 0 0-1.5 0L4.5 9.5 4 12Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-expand"><path d="M9.25 3.5h3.25v3.25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="m12.5 3.5-5.5 5.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="M6.75 12.5H3.5V9.25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="m3.5 12.5 5.5-5.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-info"><circle cx="8" cy="8" fill="none" r="5.75" stroke="currentColor" stroke-width="1.5"></circle><path d="M8 7.25v3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path><circle cx="8" cy="5" fill="currentColor" r="0.75"></circle></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-menu"><path d="M3 4.75h10M3 8h10M3 11.25h10" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-open"><path d="M6.25 4H4.5A1.5 1.5 0 0 0 3 5.5v6A1.5 1.5 0 0 0 4.5 13h6A1.5 1.5 0 0 0 12 11.5V9.75" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="M8 3h5v5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="m13 3-6.25 6.25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-search"><circle cx="7" cy="7" fill="none" r="4.25" stroke="currentColor" stroke-width="1.5"></circle><path d="m10.25 10.25 3 3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-spinner"><circle cx="8" cy="8" fill="none" opacity="0.24" r="5.25" stroke="currentColor" stroke-width="1.5"></circle><path d="M8 2.75a5.25 5.25 0 0 1 5.25 5.25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-trash"><path d="M3.75 4.75h8.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path><path d="M6.25 4.75V4a1 1 0 0 1 1-1h1.5a1 1 0 0 1 1 1v.75" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="m5 6.25.45 5.1A1.5 1.5 0 0 0 6.94 12.75h2.12a1.5 1.5 0 0 0 1.49-1.4L11 6.25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="M7 7.25v3.5M9 7.25v3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></symbol></svg><!-- rmx:h:h04dad5c8 --><div class="rmxc-9ru0zn"><aside aria-label="Theme token controls" class="rmxc-kebhhz"><div class="rmxc-vzinc0"><div><p class="rmxc-boaut3">Remix UI (WIP)</p><h2 class="rmxc-am4t5">Theme Builder</h2><p class="rmxc-jgmsmy">This is a work in progress but gives you an idea of what we're working on for Remix UI.</p></div><div class="rmxc-olqvb4"><button type="button" class="rmxc-ksev4u rmxc-q1stkb"><span class="rmxc-pmh8mc">Reset</span></button><button type="button" class="rmxc-ksev4u rmxc-ks2ne9"><span class="rmxc-pmh8mc">Download</span></button></div></div><div data-type="multiple" class="rmxc-kouzop rmxc-kouzop"><div data-state="closed" class="rmxc-7s5f80 rmxc-ysageh"><h3><button aria-controls="saee53fad-7-panel" data-state="closed" id="saee53fad-7-trigger" type="button" class="rmxc-kra4l5"><span>Colors</span><span data-rmx-accordion-indicator="" data-state="closed" class="rmxc-n79xi4"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#rmx-glyph-chevronRight"></use></svg></span></button></h3><div aria-hidden aria-labelledby="saee53fad-7-trigger" data-state="closed" id="saee53fad-7-panel" inert class="rmxc-jymand"><div class="rmxc-xicfcp"><div class="rmxc-alkc0w"><div class="rmxc-sqiqrr"><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">colors.text.primary</span><span class="rmxc-iuhf2s"><input aria-label="colors.text.primary color" type="color" value="#151515" class="rmxc-l6x26m" /><input aria-label="colors.text.primary value" type="text" value="#151515" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">colors.text.secondary</span><span class="rmxc-iuhf2s"><input aria-label="colors.text.secondary color" type="color" value="#4f4f4f" class="rmxc-l6x26m" /><input aria-label="colors.text.secondary value" type="text" value="#4f4f4f" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">colors.text.muted</span><span class="rmxc-iuhf2s"><input aria-label="colors.text.muted color" type="color" value="#6d6d6d" class="rmxc-l6x26m" /><input aria-label="colors.text.muted value" type="text" value="#6d6d6d" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">colors.text.link</span><span class="rmxc-iuhf2s"><input aria-label="colors.text.link color" type="color" value="#1A72FF" class="rmxc-l6x26m" /><input aria-label="colors.text.link value" type="text" value="#1A72FF" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">colors.border.subtle</span><span class="rmxc-iuhf2s"><input aria-label="colors.border.subtle color" type="color" value="#e7e7e7" class="rmxc-l6x26m" /><input aria-label="colors.border.subtle value" type="text" value="#e7e7e7" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">colors.border.default</span><span class="rmxc-iuhf2s"><input aria-label="colors.border.default color" type="color" value="#d1d1d1" class="rmxc-l6x26m" /><input aria-label="colors.border.default value" type="text" value="#d1d1d1" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">colors.border.strong</span><span class="rmxc-iuhf2s"><input aria-label="colors.border.strong color" type="color" value="#b0b0b0" class="rmxc-l6x26m" /><input aria-label="colors.border.strong value" type="text" value="#b0b0b0" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">colors.focus.ring</span><span class="rmxc-iuhf2s"><input aria-label="colors.focus.ring color" type="color" value="#1A72FF" class="rmxc-l6x26m" /><input aria-label="colors.focus.ring value" type="text" value="#1A72FF" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">colors.overlay.scrim</span><span class="rmxc-iuhf2s"><input aria-label="colors.overlay.scrim value" type="text" value="rgb(0 0 0 / 0.28)" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">colors.action.primary.background</span><span class="rmxc-iuhf2s"><input aria-label="colors.action.primary.background color" type="color" value="#1A72FF" class="rmxc-l6x26m" /><input aria-label="colors.action.primary.background value" type="text" value="#1A72FF" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">colors.action.primary.backgroundHover</span><span class="rmxc-iuhf2s"><input aria-label="colors.action.primary.backgroundHover color" type="color" value="#1463e0" class="rmxc-l6x26m" /><input aria-label="colors.action.primary.backgroundHover value" type="text" value="#1463e0" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">colors.action.primary.backgroundActive</span><span class="rmxc-iuhf2s"><input aria-label="colors.action.primary.backgroundActive color" type="color" value="#0f55c9" class="rmxc-l6x26m" /><input aria-label="colors.action.primary.backgroundActive value" type="text" value="#0f55c9" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">colors.action.primary.foreground</span><span class="rmxc-iuhf2s"><input aria-label="colors.action.primary.foreground value" type="text" value="rgb(255 255 255 / 0.92)" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">colors.action.primary.border</span><span class="rmxc-iuhf2s"><input aria-label="colors.action.primary.border color" type="color" value="#1A72FF" class="rmxc-l6x26m" /><input aria-label="colors.action.primary.border value" type="text" value="#1A72FF" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">colors.action.secondary.background</span><span class="rmxc-iuhf2s"><input aria-label="colors.action.secondary.background color" type="color" value="#ffffff" class="rmxc-l6x26m" /><input aria-label="colors.action.secondary.background value" type="text" value="#ffffff" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">colors.action.secondary.backgroundHover</span><span class="rmxc-iuhf2s"><input aria-label="colors.action.secondary.backgroundHover color" type="color" value="#fbfbfb" class="rmxc-l6x26m" /><input aria-label="colors.action.secondary.backgroundHover value" type="text" value="#fbfbfb" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">colors.action.secondary.backgroundActive</span><span class="rmxc-iuhf2s"><input aria-label="colors.action.secondary.backgroundActive color" type="color" value="#f3f3f3" class="rmxc-l6x26m" /><input aria-label="colors.action.secondary.backgroundActive value" type="text" value="#f3f3f3" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">colors.action.secondary.foreground</span><span class="rmxc-iuhf2s"><input aria-label="colors.action.secondary.foreground color" type="color" value="#202020" class="rmxc-l6x26m" /><input aria-label="colors.action.secondary.foreground value" type="text" value="#202020" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">colors.action.secondary.border</span><span class="rmxc-iuhf2s"><input aria-label="colors.action.secondary.border color" type="color" value="#d1d1d1" class="rmxc-l6x26m" /><input aria-label="colors.action.secondary.border value" type="text" value="#d1d1d1" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">colors.action.danger.background</span><span class="rmxc-iuhf2s"><input aria-label="colors.action.danger.background color" type="color" value="#FF3000" class="rmxc-l6x26m" /><input aria-label="colors.action.danger.background value" type="text" value="#FF3000" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">colors.action.danger.backgroundHover</span><span class="rmxc-iuhf2s"><input aria-label="colors.action.danger.backgroundHover color" type="color" value="#e12b00" class="rmxc-l6x26m" /><input aria-label="colors.action.danger.backgroundHover value" type="text" value="#e12b00" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">colors.action.danger.backgroundActive</span><span class="rmxc-iuhf2s"><input aria-label="colors.action.danger.backgroundActive color" type="color" value="#c52600" class="rmxc-l6x26m" /><input aria-label="colors.action.danger.backgroundActive value" type="text" value="#c52600" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">colors.action.danger.foreground</span><span class="rmxc-iuhf2s"><input aria-label="colors.action.danger.foreground value" type="text" value="rgb(255 255 255 / 0.92)" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">colors.action.danger.border</span><span class="rmxc-iuhf2s"><input aria-label="colors.action.danger.border color" type="color" value="#FF3000" class="rmxc-l6x26m" /><input aria-label="colors.action.danger.border value" type="text" value="#FF3000" class="rmxc-84qeak" /></span></label></div></div></div></div></div><div data-state="closed" class="rmxc-7s5f80 rmxc-ysageh"><h3><button aria-controls="saee53fad-8-panel" data-state="closed" id="saee53fad-8-trigger" type="button" class="rmxc-kra4l5"><span>Control</span><span data-rmx-accordion-indicator="" data-state="closed" class="rmxc-n79xi4"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#rmx-glyph-chevronRight"></use></svg></span></button></h3><div aria-hidden aria-labelledby="saee53fad-8-trigger" data-state="closed" id="saee53fad-8-panel" inert class="rmxc-jymand"><div class="rmxc-xicfcp"><div class="rmxc-alkc0w"><div class="rmxc-sqiqrr"><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">control.height.sm</span><span class="rmxc-iuhf2s"><input aria-label="control.height.sm range" max="72" min="0" step="1" type="range" value="28" class="rmxc-t4cb3d" /><input aria-label="control.height.sm value" type="text" value="28px" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">control.height.md</span><span class="rmxc-iuhf2s"><input aria-label="control.height.md range" max="72" min="0" step="1" type="range" value="32" class="rmxc-t4cb3d" /><input aria-label="control.height.md value" type="text" value="32px" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">control.height.lg</span><span class="rmxc-iuhf2s"><input aria-label="control.height.lg range" max="72" min="0" step="1" type="range" value="36" class="rmxc-t4cb3d" /><input aria-label="control.height.lg value" type="text" value="36px" class="rmxc-84qeak" /></span></label></div></div></div></div></div><div data-state="closed" class="rmxc-7s5f80 rmxc-ysageh"><h3><button aria-controls="saee53fad-9-panel" data-state="closed" id="saee53fad-9-trigger" type="button" class="rmxc-kra4l5"><span>Font Family</span><span data-rmx-accordion-indicator="" data-state="closed" class="rmxc-n79xi4"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#rmx-glyph-chevronRight"></use></svg></span></button></h3><div aria-hidden aria-labelledby="saee53fad-9-trigger" data-state="closed" id="saee53fad-9-panel" inert class="rmxc-jymand"><div class="rmxc-xicfcp"><div class="rmxc-alkc0w"><div class="rmxc-sqiqrr"><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">fontFamily.sans</span><span class="rmxc-iuhf2s"><input aria-label="fontFamily.sans value" type="text" value="&quot;Inter&quot;, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">fontFamily.mono</span><span class="rmxc-iuhf2s"><input aria-label="fontFamily.mono value" type="text" value="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, &quot;Liberation Mono&quot;, &quot;Courier New&quot;, monospace" class="rmxc-84qeak" /></span></label></div></div></div></div></div><div data-state="closed" class="rmxc-7s5f80 rmxc-ysageh"><h3><button aria-controls="saee53fad-10-panel" data-state="closed" id="saee53fad-10-trigger" type="button" class="rmxc-kra4l5"><span>Font Size</span><span data-rmx-accordion-indicator="" data-state="closed" class="rmxc-n79xi4"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#rmx-glyph-chevronRight"></use></svg></span></button></h3><div aria-hidden aria-labelledby="saee53fad-10-trigger" data-state="closed" id="saee53fad-10-panel" inert class="rmxc-jymand"><div class="rmxc-xicfcp"><div class="rmxc-alkc0w"><div class="rmxc-sqiqrr"><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">fontSize.xxxs</span><span class="rmxc-iuhf2s"><input aria-label="fontSize.xxxs range" max="72" min="0" step="1" type="range" value="10" class="rmxc-t4cb3d" /><input aria-label="fontSize.xxxs value" type="text" value="10px" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">fontSize.xxs</span><span class="rmxc-iuhf2s"><input aria-label="fontSize.xxs range" max="72" min="0" step="1" type="range" value="11" class="rmxc-t4cb3d" /><input aria-label="fontSize.xxs value" type="text" value="11px" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">fontSize.xs</span><span class="rmxc-iuhf2s"><input aria-label="fontSize.xs range" max="72" min="0" step="1" type="range" value="12" class="rmxc-t4cb3d" /><input aria-label="fontSize.xs value" type="text" value="12px" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">fontSize.sm</span><span class="rmxc-iuhf2s"><input aria-label="fontSize.sm range" max="72" min="0" step="1" type="range" value="13" class="rmxc-t4cb3d" /><input aria-label="fontSize.sm value" type="text" value="13px" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">fontSize.md</span><span class="rmxc-iuhf2s"><input aria-label="fontSize.md range" max="72" min="0" step="1" type="range" value="14" class="rmxc-t4cb3d" /><input aria-label="fontSize.md value" type="text" value="14px" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">fontSize.lg</span><span class="rmxc-iuhf2s"><input aria-label="fontSize.lg range" max="72" min="0" step="1" type="range" value="16" class="rmxc-t4cb3d" /><input aria-label="fontSize.lg value" type="text" value="16px" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">fontSize.xl</span><span class="rmxc-iuhf2s"><input aria-label="fontSize.xl range" max="72" min="0" step="1" type="range" value="20" class="rmxc-t4cb3d" /><input aria-label="fontSize.xl value" type="text" value="20px" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">fontSize.xxl</span><span class="rmxc-iuhf2s"><input aria-label="fontSize.xxl range" max="72" min="0" step="1" type="range" value="28" class="rmxc-t4cb3d" /><input aria-label="fontSize.xxl value" type="text" value="28px" class="rmxc-84qeak" /></span></label></div></div></div></div></div><div data-state="closed" class="rmxc-7s5f80 rmxc-ysageh"><h3><button aria-controls="saee53fad-11-panel" data-state="closed" id="saee53fad-11-trigger" type="button" class="rmxc-kra4l5"><span>Font Weight</span><span data-rmx-accordion-indicator="" data-state="closed" class="rmxc-n79xi4"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#rmx-glyph-chevronRight"></use></svg></span></button></h3><div aria-hidden aria-labelledby="saee53fad-11-trigger" data-state="closed" id="saee53fad-11-panel" inert class="rmxc-jymand"><div class="rmxc-xicfcp"><div class="rmxc-alkc0w"><div class="rmxc-sqiqrr"><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">fontWeight.normal</span><span class="rmxc-iuhf2s"><input aria-label="fontWeight.normal range" max="900" min="100" step="50" type="range" value="400" class="rmxc-t4cb3d" /><input aria-label="fontWeight.normal value" type="text" value="400" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">fontWeight.medium</span><span class="rmxc-iuhf2s"><input aria-label="fontWeight.medium range" max="900" min="100" step="50" type="range" value="500" class="rmxc-t4cb3d" /><input aria-label="fontWeight.medium value" type="text" value="500" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">fontWeight.semibold</span><span class="rmxc-iuhf2s"><input aria-label="fontWeight.semibold range" max="900" min="100" step="50" type="range" value="600" class="rmxc-t4cb3d" /><input aria-label="fontWeight.semibold value" type="text" value="600" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">fontWeight.bold</span><span class="rmxc-iuhf2s"><input aria-label="fontWeight.bold range" max="900" min="100" step="50" type="range" value="700" class="rmxc-t4cb3d" /><input aria-label="fontWeight.bold value" type="text" value="700" class="rmxc-84qeak" /></span></label></div></div></div></div></div><div data-state="closed" class="rmxc-7s5f80 rmxc-ysageh"><h3><button aria-controls="saee53fad-12-panel" data-state="closed" id="saee53fad-12-trigger" type="button" class="rmxc-kra4l5"><span>Letter Spacing</span><span data-rmx-accordion-indicator="" data-state="closed" class="rmxc-n79xi4"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#rmx-glyph-chevronRight"></use></svg></span></button></h3><div aria-hidden aria-labelledby="saee53fad-12-trigger" data-state="closed" id="saee53fad-12-panel" inert class="rmxc-jymand"><div class="rmxc-xicfcp"><div class="rmxc-alkc0w"><div class="rmxc-sqiqrr"><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">letterSpacing.tight</span><span class="rmxc-iuhf2s"><input aria-label="letterSpacing.tight range" max="0.2" min="-0.12" step="0.005" type="range" value="-0.03" class="rmxc-t4cb3d" /><input aria-label="letterSpacing.tight value" type="text" value="-0.03em" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">letterSpacing.normal</span><span class="rmxc-iuhf2s"><input aria-label="letterSpacing.normal value" type="text" value="0" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">letterSpacing.meta</span><span class="rmxc-iuhf2s"><input aria-label="letterSpacing.meta range" max="0.2" min="-0.12" step="0.005" type="range" value="0.06" class="rmxc-t4cb3d" /><input aria-label="letterSpacing.meta value" type="text" value="0.06em" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">letterSpacing.wide</span><span class="rmxc-iuhf2s"><input aria-label="letterSpacing.wide range" max="0.2" min="-0.12" step="0.005" type="range" value="0.08" class="rmxc-t4cb3d" /><input aria-label="letterSpacing.wide value" type="text" value="0.08em" class="rmxc-84qeak" /></span></label></div></div></div></div></div><div data-state="closed" class="rmxc-7s5f80 rmxc-ysageh"><h3><button aria-controls="saee53fad-13-panel" data-state="closed" id="saee53fad-13-trigger" type="button" class="rmxc-kra4l5"><span>Line Height</span><span data-rmx-accordion-indicator="" data-state="closed" class="rmxc-n79xi4"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#rmx-glyph-chevronRight"></use></svg></span></button></h3><div aria-hidden aria-labelledby="saee53fad-13-trigger" data-state="closed" id="saee53fad-13-panel" inert class="rmxc-jymand"><div class="rmxc-xicfcp"><div class="rmxc-alkc0w"><div class="rmxc-sqiqrr"><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">lineHeight.tight</span><span class="rmxc-iuhf2s"><input aria-label="lineHeight.tight range" max="2.4" min="0.8" step="0.05" type="range" value="1.25" class="rmxc-t4cb3d" /><input aria-label="lineHeight.tight value" type="text" value="1.25" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">lineHeight.normal</span><span class="rmxc-iuhf2s"><input aria-label="lineHeight.normal range" max="2.4" min="0.8" step="0.05" type="range" value="1.45" class="rmxc-t4cb3d" /><input aria-label="lineHeight.normal value" type="text" value="1.45" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">lineHeight.relaxed</span><span class="rmxc-iuhf2s"><input aria-label="lineHeight.relaxed range" max="2.4" min="0.8" step="0.05" type="range" value="1.65" class="rmxc-t4cb3d" /><input aria-label="lineHeight.relaxed value" type="text" value="1.65" class="rmxc-84qeak" /></span></label></div></div></div></div></div><div data-state="closed" class="rmxc-7s5f80 rmxc-ysageh"><h3><button aria-controls="saee53fad-14-panel" data-state="closed" id="saee53fad-14-trigger" type="button" class="rmxc-kra4l5"><span>Radius</span><span data-rmx-accordion-indicator="" data-state="closed" class="rmxc-n79xi4"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#rmx-glyph-chevronRight"></use></svg></span></button></h3><div aria-hidden aria-labelledby="saee53fad-14-trigger" data-state="closed" id="saee53fad-14-panel" inert class="rmxc-jymand"><div class="rmxc-xicfcp"><div class="rmxc-alkc0w"><div class="rmxc-sqiqrr"><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">radius.none</span><span class="rmxc-iuhf2s"><input aria-label="radius.none range" max="64" min="0" step="1" type="range" value="0" class="rmxc-t4cb3d" /><input aria-label="radius.none value" type="text" value="0px" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">radius.sm</span><span class="rmxc-iuhf2s"><input aria-label="radius.sm range" max="64" min="0" step="1" type="range" value="4" class="rmxc-t4cb3d" /><input aria-label="radius.sm value" type="text" value="4px" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">radius.md</span><span class="rmxc-iuhf2s"><input aria-label="radius.md range" max="64" min="0" step="1" type="range" value="8" class="rmxc-t4cb3d" /><input aria-label="radius.md value" type="text" value="8px" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">radius.lg</span><span class="rmxc-iuhf2s"><input aria-label="radius.lg range" max="64" min="0" step="1" type="range" value="12" class="rmxc-t4cb3d" /><input aria-label="radius.lg value" type="text" value="12px" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">radius.xl</span><span class="rmxc-iuhf2s"><input aria-label="radius.xl range" max="64" min="0" step="1" type="range" value="16" class="rmxc-t4cb3d" /><input aria-label="radius.xl value" type="text" value="16px" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">radius.full</span><span class="rmxc-iuhf2s"><input aria-label="radius.full value" type="text" value="9999px" class="rmxc-84qeak" /></span></label></div></div></div></div></div><div data-state="closed" class="rmxc-7s5f80 rmxc-ysageh"><h3><button aria-controls="saee53fad-15-panel" data-state="closed" id="saee53fad-15-trigger" type="button" class="rmxc-kra4l5"><span>Shadow</span><span data-rmx-accordion-indicator="" data-state="closed" class="rmxc-n79xi4"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#rmx-glyph-chevronRight"></use></svg></span></button></h3><div aria-hidden aria-labelledby="saee53fad-15-trigger" data-state="closed" id="saee53fad-15-panel" inert class="rmxc-jymand"><div class="rmxc-xicfcp"><div class="rmxc-alkc0w"><div class="rmxc-sqiqrr"><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">shadow.xs</span><span class="rmxc-iuhf2s"><input aria-label="shadow.xs value" type="text" value="0 1px 1px rgb(0 0 0 / 0.05)" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">shadow.sm</span><span class="rmxc-iuhf2s"><input aria-label="shadow.sm value" type="text" value="0 1px 2px rgb(0 0 0 / 0.07)" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">shadow.md</span><span class="rmxc-iuhf2s"><input aria-label="shadow.md value" type="text" value="0 6px 18px rgb(0 0 0 / 0.08)" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">shadow.lg</span><span class="rmxc-iuhf2s"><input aria-label="shadow.lg value" type="text" value="0 16px 34px rgb(0 0 0 / 0.10)" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">shadow.xl</span><span class="rmxc-iuhf2s"><input aria-label="shadow.xl value" type="text" value="0 24px 52px rgb(0 0 0 / 0.14)" class="rmxc-84qeak" /></span></label></div></div></div></div></div><div data-state="closed" class="rmxc-7s5f80 rmxc-ysageh"><h3><button aria-controls="saee53fad-16-panel" data-state="closed" id="saee53fad-16-trigger" type="button" class="rmxc-kra4l5"><span>Space</span><span data-rmx-accordion-indicator="" data-state="closed" class="rmxc-n79xi4"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#rmx-glyph-chevronRight"></use></svg></span></button></h3><div aria-hidden aria-labelledby="saee53fad-16-trigger" data-state="closed" id="saee53fad-16-panel" inert class="rmxc-jymand"><div class="rmxc-xicfcp"><div class="rmxc-alkc0w"><div class="rmxc-sqiqrr"><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">space.none</span><span class="rmxc-iuhf2s"><input aria-label="space.none range" max="64" min="0" step="1" type="range" value="0" class="rmxc-t4cb3d" /><input aria-label="space.none value" type="text" value="0px" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">space.px</span><span class="rmxc-iuhf2s"><input aria-label="space.px range" max="64" min="0" step="1" type="range" value="1" class="rmxc-t4cb3d" /><input aria-label="space.px value" type="text" value="1px" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">space.xs</span><span class="rmxc-iuhf2s"><input aria-label="space.xs range" max="64" min="0" step="1" type="range" value="4" class="rmxc-t4cb3d" /><input aria-label="space.xs value" type="text" value="4px" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">space.sm</span><span class="rmxc-iuhf2s"><input aria-label="space.sm range" max="64" min="0" step="1" type="range" value="8" class="rmxc-t4cb3d" /><input aria-label="space.sm value" type="text" value="8px" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">space.md</span><span class="rmxc-iuhf2s"><input aria-label="space.md range" max="64" min="0" step="1" type="range" value="12" class="rmxc-t4cb3d" /><input aria-label="space.md value" type="text" value="12px" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">space.lg</span><span class="rmxc-iuhf2s"><input aria-label="space.lg range" max="64" min="0" step="1" type="range" value="16" class="rmxc-t4cb3d" /><input aria-label="space.lg value" type="text" value="16px" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">space.xl</span><span class="rmxc-iuhf2s"><input aria-label="space.xl range" max="64" min="0" step="1" type="range" value="24" class="rmxc-t4cb3d" /><input aria-label="space.xl value" type="text" value="24px" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">space.xxl</span><span class="rmxc-iuhf2s"><input aria-label="space.xxl range" max="64" min="0" step="1" type="range" value="32" class="rmxc-t4cb3d" /><input aria-label="space.xxl value" type="text" value="32px" class="rmxc-84qeak" /></span></label></div></div></div></div></div><div data-state="closed" class="rmxc-7s5f80 rmxc-ysageh"><h3><button aria-controls="saee53fad-17-panel" data-state="closed" id="saee53fad-17-trigger" type="button" class="rmxc-kra4l5"><span>Surface</span><span data-rmx-accordion-indicator="" data-state="closed" class="rmxc-n79xi4"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#rmx-glyph-chevronRight"></use></svg></span></button></h3><div aria-hidden aria-labelledby="saee53fad-17-trigger" data-state="closed" id="saee53fad-17-panel" inert class="rmxc-jymand"><div class="rmxc-xicfcp"><div class="rmxc-alkc0w"><div class="rmxc-sqiqrr"><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">surface.lvl0</span><span class="rmxc-iuhf2s"><input aria-label="surface.lvl0 color" type="color" value="#ffffff" class="rmxc-l6x26m" /><input aria-label="surface.lvl0 value" type="text" value="#ffffff" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">surface.lvl1</span><span class="rmxc-iuhf2s"><input aria-label="surface.lvl1 color" type="color" value="#f8f8f8" class="rmxc-l6x26m" /><input aria-label="surface.lvl1 value" type="text" value="#f8f8f8" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">surface.lvl2</span><span class="rmxc-iuhf2s"><input aria-label="surface.lvl2 color" type="color" value="#f5f5f5" class="rmxc-l6x26m" /><input aria-label="surface.lvl2 value" type="text" value="#f5f5f5" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">surface.lvl3</span><span class="rmxc-iuhf2s"><input aria-label="surface.lvl3 color" type="color" value="#f3f3f3" class="rmxc-l6x26m" /><input aria-label="surface.lvl3 value" type="text" value="#f3f3f3" class="rmxc-84qeak" /></span></label><label class="rmxc-56f2xg"><span class="rmxc-xlgzpf">surface.lvl4</span><span class="rmxc-iuhf2s"><input aria-label="surface.lvl4 color" type="color" value="#efefef" class="rmxc-l6x26m" /><input aria-label="surface.lvl4 value" type="text" value="#efefef" class="rmxc-84qeak" /></span></label></div></div></div></div></div></div></aside><main data-theme-preview="" class="rmxc-3ctjis"><style data-rmx-theme="" data-rmx-theme-selector="[data-theme-preview]">[data-theme-preview] {
+  --rmx-space-none: 0px;
+  --rmx-space-px: 1px;
+  --rmx-space-xs: 4px;
+  --rmx-space-sm: 8px;
+  --rmx-space-md: 12px;
+  --rmx-space-lg: 16px;
+  --rmx-space-xl: 24px;
+  --rmx-space-xxl: 32px;
+  --rmx-radius-none: 0px;
+  --rmx-radius-sm: 4px;
+  --rmx-radius-md: 8px;
+  --rmx-radius-lg: 12px;
+  --rmx-radius-xl: 16px;
+  --rmx-radius-full: 9999px;
+  --rmx-font-family-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --rmx-font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --rmx-font-size-xxxs: 10px;
+  --rmx-font-size-xxs: 11px;
+  --rmx-font-size-xs: 12px;
+  --rmx-font-size-sm: 13px;
+  --rmx-font-size-md: 14px;
+  --rmx-font-size-lg: 16px;
+  --rmx-font-size-xl: 20px;
+  --rmx-font-size-xxl: 28px;
+  --rmx-line-height-tight: 1.25;
+  --rmx-line-height-normal: 1.45;
+  --rmx-line-height-relaxed: 1.65;
+  --rmx-letter-spacing-tight: -0.03em;
+  --rmx-letter-spacing-normal: 0;
+  --rmx-letter-spacing-meta: 0.06em;
+  --rmx-letter-spacing-wide: 0.08em;
+  --rmx-font-weight-normal: 400;
+  --rmx-font-weight-medium: 500;
+  --rmx-font-weight-semibold: 600;
+  --rmx-font-weight-bold: 700;
+  --rmx-control-height-sm: 28px;
+  --rmx-control-height-md: 32px;
+  --rmx-control-height-lg: 36px;
+  --rmx-surface-lvl0: #ffffff;
+  --rmx-surface-lvl1: #f8f8f8;
+  --rmx-surface-lvl2: #f5f5f5;
+  --rmx-surface-lvl3: #f3f3f3;
+  --rmx-surface-lvl4: #efefef;
+  --rmx-shadow-xs: 0 1px 1px rgb(0 0 0 / 0.05);
+  --rmx-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.07);
+  --rmx-shadow-md: 0 6px 18px rgb(0 0 0 / 0.08);
+  --rmx-shadow-lg: 0 16px 34px rgb(0 0 0 / 0.10);
+  --rmx-shadow-xl: 0 24px 52px rgb(0 0 0 / 0.14);
+  --rmx-color-text-primary: #151515;
+  --rmx-color-text-secondary: #4f4f4f;
+  --rmx-color-text-muted: #6d6d6d;
+  --rmx-color-text-link: #1A72FF;
+  --rmx-color-border-subtle: #e7e7e7;
+  --rmx-color-border-default: #d1d1d1;
+  --rmx-color-border-strong: #b0b0b0;
+  --rmx-color-focus-ring: #1A72FF;
+  --rmx-color-overlay-scrim: rgb(0 0 0 / 0.28);
+  --rmx-color-action-primary-background: #1A72FF;
+  --rmx-color-action-primary-background-hover: #1463e0;
+  --rmx-color-action-primary-background-active: #0f55c9;
+  --rmx-color-action-primary-foreground: rgb(255 255 255 / 0.92);
+  --rmx-color-action-primary-border: #1A72FF;
+  --rmx-color-action-secondary-background: #ffffff;
+  --rmx-color-action-secondary-background-hover: #fbfbfb;
+  --rmx-color-action-secondary-background-active: #f3f3f3;
+  --rmx-color-action-secondary-foreground: #202020;
+  --rmx-color-action-secondary-border: #d1d1d1;
+  --rmx-color-action-danger-background: #FF3000;
+  --rmx-color-action-danger-background-hover: #e12b00;
+  --rmx-color-action-danger-background-active: #c52600;
+  --rmx-color-action-danger-foreground: rgb(255 255 255 / 0.92);
+  --rmx-color-action-danger-border: #FF3000;
+}</style><div class="rmxc-v3725d"><div class="rmxc-rs04h6"><article class="rmxc-charqp"><div class="rmxc-v71maw"><h3 class="rmxc-am4t5">Button</h3><p class="rmxc-jgmsmy">Primary, secondary, ghost, danger, and icon slots.</p></div><div class="rmxc-nk7fh9"><div class="rmxc-e2y2oj"><button type="button" class="rmxc-ksev4u rmxc-ks2ne9"><span aria-hidden class="rmxc-scxg5a"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#rmx-glyph-add"></use></svg></span><span class="rmxc-pmh8mc">Create</span></button><button type="button" class="rmxc-ksev4u rmxc-q1stkb"><span class="rmxc-pmh8mc">Preview</span></button><button type="button" class="rmxc-ksev4u rmxc-6lftcu"><span class="rmxc-pmh8mc">Ghost</span></button><button type="button" class="rmxc-ksev4u rmxc-58m8ns"><span class="rmxc-pmh8mc">Delete</span></button></div></div></article><article class="rmxc-charqp"><div class="rmxc-v71maw"><h3 class="rmxc-am4t5">Breadcrumbs</h3><p class="rmxc-jgmsmy">Navigation text, separators, and current item.</p></div><div class="rmxc-nk7fh9"><nav aria-label="Breadcrumb" class="rmxc-7s5f80"><ol class="rmxc-313p37"><li class="rmxc-en52ll"><a href="#workspace" class="rmxc-iquopg">Workspace</a></li><li aria-hidden="true" class="rmxc-2ae3u2"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#rmx-glyph-chevronRight"></use></svg></li><li class="rmxc-en52ll"><a href="#projects" class="rmxc-iquopg">Projects</a></li><li aria-hidden="true" class="rmxc-2ae3u2"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#rmx-glyph-chevronRight"></use></svg></li><li class="rmxc-en52ll"><span aria-current="page" class="rmxc-vxvddv">Theme Builder</span></li></ol></nav></div></article><article class="rmxc-charqp"><div class="rmxc-v71maw"><h3 class="rmxc-am4t5">Accordion</h3><p class="rmxc-jgmsmy">Disclosure rhythm, panel copy, and indicators.</p></div><div class="rmxc-nk7fh9"><div data-type="single" class="rmxc-kouzop"><div data-state="open" class="rmxc-7s5f80"><h3><button aria-controls="saee53fad-13-panel" aria-expanded data-state="open" id="saee53fad-13-trigger" type="button" class="rmxc-kra4l5"><span>Token changes</span><span data-rmx-accordion-indicator="" data-state="open" class="rmxc-n79xi4"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#rmx-glyph-chevronRight"></use></svg></span></button></h3><div aria-labelledby="saee53fad-13-trigger" data-state="open" id="saee53fad-13-panel" class="rmxc-jymand"><div class="rmxc-xicfcp"><div class="rmxc-alkc0w">Changing a token updates every consumer below this scoped preview.</div></div></div></div><div data-state="closed" class="rmxc-7s5f80"><h3><button aria-controls="saee53fad-14-panel" data-state="closed" id="saee53fad-14-trigger" type="button" class="rmxc-kra4l5"><span>Download output</span><span data-rmx-accordion-indicator="" data-state="closed" class="rmxc-n79xi4"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#rmx-glyph-chevronRight"></use></svg></span></button></h3><div aria-hidden aria-labelledby="saee53fad-14-trigger" data-state="closed" id="saee53fad-14-panel" inert class="rmxc-jymand"><div class="rmxc-xicfcp"><div class="rmxc-alkc0w">The generated file exports a `createTheme(...)` call with the current values.</div></div></div></div></div></div></article><article class="rmxc-charqp"><div class="rmxc-v71maw"><h3 class="rmxc-am4t5">Select</h3><p class="rmxc-jgmsmy">Trigger, popup, option, and selected states.</p></div><div class="rmxc-nk7fh9"><div class="rmxc-v71maw"><label for="theme-builder-density" class="rmxc-nr95e1">Density</label><button id="theme-builder-density" type="button" class="rmxc-ksev4u rmxc-1ntvn4 rmxc-2lytga" aria-haspopup="listbox" aria-expanded="false" aria-controls="saee53fad-15-list"><span class="rmxc-pmh8mc">Comfortable</span><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-scxg5a"><use xlink:href="#rmx-glyph-chevronVertical"></use></svg></button><div class="rmxc-3ghnya rmxc-7prw8y" popover="manual"><div class="rmxc-csveyg rmxc-d2dnz2" id="saee53fad-15-list" tabindex="-1" role="listbox"><div class="rmxc-vgm8um" role="option" id="ssr-mixin" aria-selected="false" aria-disabled="false" data-highlighted="false"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-vtayqe"><use xlink:href="#rmx-glyph-check"></use></svg><span class="rmxc-vtco96">Compact</span></div><div class="rmxc-vgm8um" role="option" id="ssr-mixin" aria-selected="true" aria-disabled="false" data-highlighted="true"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-vtayqe"><use xlink:href="#rmx-glyph-check"></use></svg><span class="rmxc-vtco96">Comfortable</span></div><div class="rmxc-vgm8um" role="option" id="ssr-mixin" aria-selected="false" aria-disabled="false" data-highlighted="false"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-vtayqe"><use xlink:href="#rmx-glyph-check"></use></svg><span class="rmxc-vtco96">Roomy</span></div></div></div><input name="density" type="hidden" value="comfortable" /></div></div></article><article class="rmxc-charqp"><div class="rmxc-v71maw"><h3 class="rmxc-am4t5">Combobox</h3><p class="rmxc-jgmsmy">Input, filtered popup, active option, and text.</p></div><div class="rmxc-nk7fh9"><div class="rmxc-sqiqrr"><div class="rmxc-v71maw"><label for="saee53fad-14-airport" class="rmxc-nr95e1">Airport</label><div class="rmxc-2lytga"><input id="saee53fad-14-airport" placeholder="Search airport" class="rmxc-fk4bkm" aria-autocomplete="list" aria-controls="saee53fad-17-combobox-list" aria-expanded="false" aria-haspopup="listbox" autocomplete="off" role="combobox" type="text" /><div class="rmxc-3ghnya rmxc-7prw8y rmxc-925a1" data-show-reason="nav" popover="manual"><div class="rmxc-csveyg rmxc-d2dnz2" id="saee53fad-17-combobox-list" tabindex="-1" role="listbox"><div class="rmxc-vgm8um" role="option" id="ssr-mixin" aria-selected="false" aria-disabled="false" data-highlighted="false"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-vtayqe"><use xlink:href="#rmx-glyph-check"></use></svg><span class="rmxc-vtco96">Austin Bergstrom</span></div><div class="rmxc-vgm8um" role="option" id="ssr-mixin" aria-selected="false" aria-disabled="false" data-highlighted="false"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-vtayqe"><use xlink:href="#rmx-glyph-check"></use></svg><span class="rmxc-vtco96">Chicago O Hare</span></div><div class="rmxc-vgm8um" role="option" id="ssr-mixin" aria-selected="false" aria-disabled="false" data-highlighted="false"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-vtayqe"><use xlink:href="#rmx-glyph-check"></use></svg><span class="rmxc-vtco96">Los Angeles</span></div><div class="rmxc-vgm8um" role="option" id="ssr-mixin" aria-selected="false" aria-disabled="false" data-highlighted="false"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-vtayqe"><use xlink:href="#rmx-glyph-check"></use></svg><span class="rmxc-vtco96">New York JFK</span></div><div class="rmxc-vgm8um" role="option" id="ssr-mixin" aria-selected="false" aria-disabled="false" data-highlighted="false"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-vtayqe"><use xlink:href="#rmx-glyph-check"></use></svg><span class="rmxc-vtco96">San Francisco</span></div></div></div><input name="airport" type="hidden" value="" /></div></div><p class="rmxc-w2zsjf">value=null</p></div></div></article><article class="rmxc-charqp"><div class="rmxc-v71maw"><h3 class="rmxc-am4t5">Listbox</h3><p class="rmxc-jgmsmy">Headless option styling, highlight, and selection.</p></div><div class="rmxc-nk7fh9"><div tabindex="0" class="rmxc-d2dnz2 rmxc-mtu39i" role="listbox"><div class="rmxc-vgm8um" role="option" id="ssr-mixin" aria-selected="false" aria-disabled="false" data-highlighted="false"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-vtayqe"><use xlink:href="#rmx-glyph-check"></use></svg><span class="rmxc-vtco96">Planning</span></div><div class="rmxc-vgm8um" role="option" id="ssr-mixin" aria-selected="true" aria-disabled="false" data-highlighted="true"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-vtayqe"><use xlink:href="#rmx-glyph-check"></use></svg><span class="rmxc-vtco96">Design</span></div><div class="rmxc-vgm8um" role="option" id="ssr-mixin" aria-selected="false" aria-disabled="false" data-highlighted="false"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-vtayqe"><use xlink:href="#rmx-glyph-check"></use></svg><span class="rmxc-vtco96">Build</span></div><div class="rmxc-vgm8um" role="option" id="ssr-mixin" aria-selected="false" aria-disabled="false" data-highlighted="false"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-vtayqe"><use xlink:href="#rmx-glyph-check"></use></svg><span class="rmxc-vtco96">Review</span></div></div></div></article><article class="rmxc-charqp"><div class="rmxc-v71maw"><h3 class="rmxc-am4t5">Menu</h3><p class="rmxc-jgmsmy">Action menu, checkboxes, radios, and submenus.</p></div><div class="rmxc-nk7fh9"><div aria-hidden="true" class="rmxc-8p9il2"><div role="menu" class="rmxc-wfz2il rmxc-74x79f"><div aria-checked="true" role="menuitemcheckbox" class="rmxc-vu0ok0"><span class="rmxc-gugyud"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-7sc2e7"><use xlink:href="#rmx-glyph-check"></use></svg></span><span class="rmxc-cvurn">Word wrap</span></div><div aria-checked="false" role="menuitemcheckbox" class="rmxc-vu0ok0"><span class="rmxc-gugyud"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-7sc2e7"><use xlink:href="#rmx-glyph-check"></use></svg></span><span class="rmxc-cvurn">Minimap</span></div><div aria-controls="theme-builder-static-density-menu" aria-expanded="true" aria-haspopup="menu" id="theme-builder-static-density-trigger" role="menuitem" tabindex="-1" class="rmxc-vu0ok0"><span class="rmxc-gugyud"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-7sc2e7"><use xlink:href="#rmx-glyph-check"></use></svg></span><span class="rmxc-cvurn">Density</span><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-k21qxx"><use xlink:href="#rmx-glyph-chevronRight"></use></svg></div></div><div data-anchor-placement="right-start" data-menu-submenu="true" role="menu" id="theme-builder-static-density-menu" class="rmxc-wfz2il rmxc-73uhcz rmxc-74x79f rmxc-7eydem"><div aria-checked="true" role="menuitemradio" class="rmxc-vu0ok0"><span class="rmxc-gugyud"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-7sc2e7"><use xlink:href="#rmx-glyph-check"></use></svg></span><span class="rmxc-cvurn">Comfortable</span></div><div aria-checked="false" role="menuitemradio" class="rmxc-vu0ok0"><span class="rmxc-gugyud"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-7sc2e7"><use xlink:href="#rmx-glyph-check"></use></svg></span><span class="rmxc-cvurn">Compact</span></div></div></div></div></article><article class="rmxc-charqp"><div class="rmxc-v71maw"><h3 class="rmxc-am4t5">Popover</h3><p class="rmxc-jgmsmy">Anchored surface, nested controls, and focus ring.</p></div><div class="rmxc-nk7fh9"><button type="button" class="rmxc-ksev4u rmxc-q1stkb"><span class="rmxc-pmh8mc">Filters</span><span aria-hidden class="rmxc-scxg5a"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#rmx-glyph-chevronDown"></use></svg></span></button><div class="rmxc-3ghnya rmxc-7prw8y" popover="manual"><div class="rmxc-csveyg rmxc-15ov44"><div class="rmxc-v71maw"><label for="saee53fad-17-status" class="rmxc-nr95e1">Status</label><button id="saee53fad-17-status" type="button" class="rmxc-ksev4u rmxc-1ntvn4 rmxc-2lytga" aria-haspopup="listbox" aria-expanded="false" aria-controls="saee53fad-22-list"><span class="rmxc-pmh8mc">Any status</span><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-scxg5a"><use xlink:href="#rmx-glyph-chevronVertical"></use></svg></button><div class="rmxc-3ghnya rmxc-7prw8y" popover="manual"><div class="rmxc-csveyg rmxc-d2dnz2" id="saee53fad-22-list" tabindex="-1" role="listbox"><div class="rmxc-vgm8um" role="option" id="ssr-mixin" aria-selected="true" aria-disabled="false" data-highlighted="true"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-vtayqe"><use xlink:href="#rmx-glyph-check"></use></svg><span class="rmxc-vtco96">Any status</span></div><div class="rmxc-vgm8um" role="option" id="ssr-mixin" aria-selected="false" aria-disabled="false" data-highlighted="false"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-vtayqe"><use xlink:href="#rmx-glyph-check"></use></svg><span class="rmxc-vtco96">Open</span></div><div class="rmxc-vgm8um" role="option" id="ssr-mixin" aria-selected="false" aria-disabled="false" data-highlighted="false"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-vtayqe"><use xlink:href="#rmx-glyph-check"></use></svg><span class="rmxc-vtco96">Closed</span></div></div></div><input name="status" type="hidden" value="any" /></div><button type="button" class="rmxc-ksev4u rmxc-6lftcu"><span class="rmxc-pmh8mc">Done</span></button></div></div></div></article></div></div></main></div><!-- /rmx:h --><script type="application/json" id="rmx-data">{"h":{"h04dad5c8":{"exportName":"ThemeBuilder","moduleUrl":"/assets/theme-builder.js","props":{}}}}</script></body></html>

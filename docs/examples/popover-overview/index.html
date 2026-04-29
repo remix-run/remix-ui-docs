@@ -1,0 +1,543 @@
+<html><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" /><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" /><script async type="module" src="/assets/entry.js"></script><title>Popover overview | RMX_01 Example</title><style data-rmx-theme="" data-rmx-theme-selector=":root">:root {
+  --rmx-space-none: 0px;
+  --rmx-space-px: 1px;
+  --rmx-space-xs: 4px;
+  --rmx-space-sm: 8px;
+  --rmx-space-md: 12px;
+  --rmx-space-lg: 16px;
+  --rmx-space-xl: 24px;
+  --rmx-space-xxl: 32px;
+  --rmx-radius-none: 0px;
+  --rmx-radius-sm: 4px;
+  --rmx-radius-md: 8px;
+  --rmx-radius-lg: 12px;
+  --rmx-radius-xl: 16px;
+  --rmx-radius-full: 9999px;
+  --rmx-font-family-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --rmx-font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --rmx-font-size-xxxs: 10px;
+  --rmx-font-size-xxs: 11px;
+  --rmx-font-size-xs: 12px;
+  --rmx-font-size-sm: 13px;
+  --rmx-font-size-md: 14px;
+  --rmx-font-size-lg: 16px;
+  --rmx-font-size-xl: 20px;
+  --rmx-font-size-xxl: 28px;
+  --rmx-line-height-tight: 1.25;
+  --rmx-line-height-normal: 1.45;
+  --rmx-line-height-relaxed: 1.65;
+  --rmx-letter-spacing-tight: -0.03em;
+  --rmx-letter-spacing-normal: 0;
+  --rmx-letter-spacing-meta: 0.06em;
+  --rmx-letter-spacing-wide: 0.08em;
+  --rmx-font-weight-normal: 400;
+  --rmx-font-weight-medium: 500;
+  --rmx-font-weight-semibold: 600;
+  --rmx-font-weight-bold: 700;
+  --rmx-control-height-sm: 28px;
+  --rmx-control-height-md: 32px;
+  --rmx-control-height-lg: 36px;
+  --rmx-surface-lvl0: #ffffff;
+  --rmx-surface-lvl1: #f8f8f8;
+  --rmx-surface-lvl2: #f5f5f5;
+  --rmx-surface-lvl3: #f3f3f3;
+  --rmx-surface-lvl4: #efefef;
+  --rmx-shadow-xs: 0 1px 1px rgb(0 0 0 / 0.05);
+  --rmx-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.07);
+  --rmx-shadow-md: 0 6px 18px rgb(0 0 0 / 0.08);
+  --rmx-shadow-lg: 0 16px 34px rgb(0 0 0 / 0.10);
+  --rmx-shadow-xl: 0 24px 52px rgb(0 0 0 / 0.14);
+  --rmx-color-text-primary: #151515;
+  --rmx-color-text-secondary: #4f4f4f;
+  --rmx-color-text-muted: #6d6d6d;
+  --rmx-color-text-link: #1A72FF;
+  --rmx-color-border-subtle: #e7e7e7;
+  --rmx-color-border-default: #d1d1d1;
+  --rmx-color-border-strong: #b0b0b0;
+  --rmx-color-focus-ring: #1A72FF;
+  --rmx-color-overlay-scrim: rgb(0 0 0 / 0.28);
+  --rmx-color-action-primary-background: #1A72FF;
+  --rmx-color-action-primary-background-hover: #1463e0;
+  --rmx-color-action-primary-background-active: #0f55c9;
+  --rmx-color-action-primary-foreground: rgb(255 255 255 / 0.92);
+  --rmx-color-action-primary-border: #1A72FF;
+  --rmx-color-action-secondary-background: #ffffff;
+  --rmx-color-action-secondary-background-hover: #fbfbfb;
+  --rmx-color-action-secondary-background-active: #f3f3f3;
+  --rmx-color-action-secondary-foreground: #202020;
+  --rmx-color-action-secondary-border: #d1d1d1;
+  --rmx-color-action-danger-background: #FF3000;
+  --rmx-color-action-danger-background-hover: #e12b00;
+  --rmx-color-action-danger-background-active: #c52600;
+  --rmx-color-action-danger-foreground: rgb(255 255 255 / 0.92);
+  --rmx-color-action-danger-border: #FF3000;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+}
+
+body {
+  font-family: var(--rmx-font-family-sans);
+  font-size: var(--rmx-font-size-md);
+  line-height: var(--rmx-line-height-normal);
+  color: var(--rmx-color-text-primary);
+  background-color: var(--rmx-surface-lvl0);
+}
+
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl, figure, blockquote) {
+  margin: 0;
+}
+
+:where(img, svg) {
+  display: block;
+}</style><style data-rmx="rmxc-eijtco">@layer rmx.rmxc-eijtco { .rmxc-eijtco {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--rmx-color-text-primary);
+  background-color: var(--rmx-surface-lvl0);
+  font-family: var(--rmx-font-family-sans);
+  padding: var(--rmx-space-xl);
+  box-sizing: border-box;
+} }</style><style data-rmx="rmxc-ytmtr8">@layer rmx.rmxc-ytmtr8 { .rmxc-ytmtr8 {
+  width: 100%;
+  max-width: 64rem;
+  margin-inline: auto;
+} }</style></head><body class="rmxc-eijtco"><svg aria-hidden focusable="false" height="0" style="position: absolute; width: 0; height: 0; overflow: hidden; pointer-events: none;" width="0" xmlns="http://www.w3.org/2000/svg"><symbol viewBox="0 0 16 16" id="rmx-glyph-add"><path d="M8 3.25v9.5M3.25 8h9.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-alert"><path d="M8 2.5 13.75 12.5H2.25Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path><path d="M8 5.75v3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path><circle cx="8" cy="11.25" fill="currentColor" r="0.75"></circle></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-check"><path d="m3.5 8.25 2.75 2.75L12.5 4.75" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-chevronDown"><path d="m3.75 6.25 4.25 4 4.25-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-chevronVertical"><path d="m3.75 6.5 4.25-4 4.25 4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="m3.75 9.5 4.25 4 4.25-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-chevronUp"><path d="m3.75 9.75 4.25-4 4.25 4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-chevronRight"><path d="m6 4 4 4-4 4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-close"><path d="m4.5 4.5 7 7m0-7-7 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-copy"><rect x="5.25" y="3.25" width="7.5" height="7.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"></rect><path d="M10.75 12.75h-5.5a2 2 0 0 1-2-2v-5.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-edit"><path d="m10.75 3.75 1.5 1.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="m4 12 2.5-.5 5.75-5.75a1.06 1.06 0 0 0 0-1.5l-.5-.5a1.06 1.06 0 0 0-1.5 0L4.5 9.5 4 12Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-expand"><path d="M9.25 3.5h3.25v3.25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="m12.5 3.5-5.5 5.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="M6.75 12.5H3.5V9.25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="m3.5 12.5 5.5-5.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-info"><circle cx="8" cy="8" fill="none" r="5.75" stroke="currentColor" stroke-width="1.5"></circle><path d="M8 7.25v3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path><circle cx="8" cy="5" fill="currentColor" r="0.75"></circle></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-menu"><path d="M3 4.75h10M3 8h10M3 11.25h10" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-open"><path d="M6.25 4H4.5A1.5 1.5 0 0 0 3 5.5v6A1.5 1.5 0 0 0 4.5 13h6A1.5 1.5 0 0 0 12 11.5V9.75" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="M8 3h5v5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="m13 3-6.25 6.25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-search"><circle cx="7" cy="7" fill="none" r="4.25" stroke="currentColor" stroke-width="1.5"></circle><path d="m10.25 10.25 3 3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-spinner"><circle cx="8" cy="8" fill="none" opacity="0.24" r="5.25" stroke="currentColor" stroke-width="1.5"></circle><path d="M8 2.75a5.25 5.25 0 0 1 5.25 5.25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></symbol><symbol viewBox="0 0 16 16" id="rmx-glyph-trash"><path d="M3.75 4.75h8.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path><path d="M6.25 4.75V4a1 1 0 0 1 1-1h1.5a1 1 0 0 1 1 1v.75" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="m5 6.25.45 5.1A1.5 1.5 0 0 0 6.94 12.75h2.12a1.5 1.5 0 0 0 1.49-1.4L11 6.25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="M7 7.25v3.5M9 7.25v3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></symbol></svg><main class="rmxc-ytmtr8"><!-- rmx:f:f4179f164 --><head><style data-rmx="rmxc-sqiqrr">@layer rmx.rmxc-sqiqrr { .rmxc-sqiqrr {
+  display: grid;
+  gap: var(--rmx-space-sm);
+} }</style><style data-rmx="rmxc-v71maw">@layer rmx.rmxc-v71maw { .rmxc-v71maw {
+  display: grid;
+  gap: var(--rmx-space-xs);
+} }</style><style data-rmx="rmxc-am4t5">@layer rmx.rmxc-am4t5 { .rmxc-am4t5 {
+  margin: 0;
+  font-size: var(--rmx-font-size-lg);
+  line-height: var(--rmx-line-height-tight);
+  font-weight: var(--rmx-font-weight-semibold);
+  color: var(--rmx-color-text-primary);
+} }</style><style data-rmx="rmxc-jgmsmy">@layer rmx.rmxc-jgmsmy { .rmxc-jgmsmy {
+  margin: 0;
+  font-size: var(--rmx-font-size-sm);
+  line-height: var(--rmx-line-height-relaxed);
+  color: var(--rmx-color-text-secondary);
+} }</style><style data-rmx="rmxc-o45anh">@layer rmx.rmxc-o45anh { .rmxc-o45anh {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--rmx-color-border-subtle);
+  border-radius: var(--rmx-radius-lg);
+  background-color: var(--rmx-surface-lvl0);
+  overflow: hidden;
+} }</style><style data-rmx="rmxc-ifw9rx">@layer rmx.rmxc-ifw9rx { .rmxc-ifw9rx {
+  display: grid;
+  align-items: center;
+  min-height: 180px;
+  padding: var(--rmx-space-xxl);
+  background-color: var(--rmx-surface-lvl0);
+} }</style><style data-rmx="rmxc-sn9csc">@layer rmx.rmxc-sn9csc { .rmxc-sn9csc {
+  max-width: 44rem;
+  margin-inline: auto;
+} }</style><style data-rmx="rmxc-yuxxlg">@layer rmx.rmxc-yuxxlg { .rmxc-yuxxlg {
+  display: flex;
+  justify-content: flex-start;
+} }</style><style data-rmx="rmxc-ksev4u">@layer rmx.rmxc-ksev4u { .rmxc-ksev4u {
+  --rmx-button-label-padding-inline: var(--rmx-space-xs);
+  all: unset;
+  box-sizing: border-box;
+  cursor: revert;
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: var(--rmx-radius-full);
+  font-family: var(--rmx-font-family-sans);
+  min-height: var(--rmx-control-height-sm);
+  padding-inline: var(--rmx-space-md);
+  font-size: var(--rmx-font-size-xs);
+  line-height: 1;
+  font-weight: var(--rmx-font-weight-medium);
+  white-space: nowrap;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+} }</style><style data-rmx="rmxc-q1stkb">@layer rmx.rmxc-q1stkb { .rmxc-q1stkb {
+  background-color: var(--rmx-color-action-secondary-background);
+  background-image: linear-gradient(to bottom, color-mix(in oklab, white 18%, var(--rmx-color-action-secondary-background)) 0%, var(--rmx-color-action-secondary-background) 100%);
+  color: var(--rmx-color-action-secondary-foreground);
+  border: 0.5px solid color-mix(in oklab, var(--rmx-color-action-secondary-border) 74%, black);
+  box-shadow: inset 0 1px 0 color-mix(in oklab, white 16%, var(--rmx-color-action-secondary-background)), var(--rmx-shadow-xs), var(--rmx-shadow-sm);
+  &:hover {
+    background-color: var(--rmx-color-action-secondary-background-hover);
+    background-image: linear-gradient(to bottom, color-mix(in oklab, white 18%, var(--rmx-color-action-secondary-background-hover)) 0%, var(--rmx-color-action-secondary-background-hover) 100%);
+    border-color: color-mix(in oklab, var(--rmx-color-action-secondary-background-hover) 74%, black);
+  }
+  &:active {
+    background-color: var(--rmx-color-action-secondary-background-active);
+    background-image: linear-gradient(to bottom, color-mix(in oklab, white 18%, var(--rmx-color-action-secondary-background-active)) 0%, var(--rmx-color-action-secondary-background-active) 100%);
+    border-color: color-mix(in oklab, var(--rmx-color-action-secondary-background-active) 74%, black);
+    box-shadow: inset 0 1px 0 color-mix(in oklab, white 12%, var(--rmx-color-action-secondary-background-active)), var(--rmx-shadow-xs);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--rmx-color-focus-ring);
+    outline-offset: 2px;
+  }
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+} }</style><style data-rmx="rmxc-pmh8mc">@layer rmx.rmxc-pmh8mc { .rmxc-pmh8mc {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+  padding-inline: var(--rmx-button-label-padding-inline);
+} }</style><style data-rmx="rmxc-scxg5a">@layer rmx.rmxc-scxg5a { .rmxc-scxg5a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  & > svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+} }</style><style data-rmx="rmxc-3ghnya">@layer rmx.rmxc-3ghnya { .rmxc-3ghnya {
+  position: fixed;
+  inset: auto;
+  margin: 0;
+  padding: var(--rmx-space-none);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 12rem;
+  max-width: min(24rem, calc(100vw - (var(--rmx-space-lg) * 2)));
+  max-height: 50dvh;
+  border: 1px solid var(--rmx-color-border-subtle);
+  border-radius: var(--rmx-radius-lg);
+  background-color: var(--rmx-surface-lvl0);
+  color: var(--rmx-color-text-primary);
+  overflow: hidden;
+  box-shadow: var(--rmx-shadow-xs), var(--rmx-shadow-md);
+  &::backdrop {
+    background: transparent;
+  }
+} }</style><style data-rmx="rmxc-7prw8y">@layer rmx.rmxc-7prw8y { .rmxc-7prw8y {
+  opacity: 0;
+  &:popover-open {
+    opacity: 1;
+  }
+  &:not(:popover-open) {
+    pointer-events: none;
+    transition: opacity 180ms ease-in, overlay 180ms ease-in, display 180ms ease-in;
+    transition-behavior: allow-discrete;
+  }
+} }</style><style data-rmx="rmxc-csveyg">@layer rmx.rmxc-csveyg { .rmxc-csveyg {
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: var(--rmx-space-xs);
+  overflow: auto;
+  overscroll-behavior: contain;
+} }</style><style data-rmx="rmxc-cy1ot9">@layer rmx.rmxc-cy1ot9 { .rmxc-cy1ot9 {
+  display: grid;
+  gap: var(--rmx-space-md);
+  width: 22rem;
+  padding: var(--rmx-space-lg);
+} }</style><style data-rmx="rmxc-rhfm45">@layer rmx.rmxc-rhfm45 { .rmxc-rhfm45 {
+  display: grid;
+  gap: var(--rmx-space-px);
+} }</style><style data-rmx="rmxc-oze8qd">@layer rmx.rmxc-oze8qd { .rmxc-oze8qd {
+  margin: 0;
+  font-size: var(--rmx-font-size-xs);
+  font-weight: var(--rmx-font-weight-semibold);
+  color: var(--rmx-color-text-primary);
+} }</style><style data-rmx="rmxc-1ntvn4">@layer rmx.rmxc-1ntvn4 { .rmxc-1ntvn4 {
+  min-height: var(--rmx-control-height-sm);
+  width: 100%;
+  padding-inline: var(--rmx-space-md);
+  padding-inline-end: var(--rmx-space-sm);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--rmx-space-sm);
+  border-radius: var(--rmx-radius-md);
+  background-image: none;
+  border: 0.5px solid transparent;
+  box-shadow: none;
+  font-size: var(--rmx-font-size-xs);
+  text-align: left;
+  background-color: var(--rmx-surface-lvl3);
+  color: var(--rmx-color-text-secondary);
+  &:hover, &:focus-visible, &[aria-expanded="true"], &[aria-expanded="true"]:hover, &[aria-expanded="true"]:focus-visible {
+    background-color: var(--rmx-surface-lvl4);
+    color: var(--rmx-color-text-primary);
+  }
+  &:active {
+    background-color: var(--rmx-surface-lvl3);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--rmx-color-focus-ring);
+    outline-offset: 2px;
+  }
+  &:disabled {
+    opacity: 0.6;
+  }
+} }</style><style data-rmx="rmxc-gzzs0q">@layer rmx.rmxc-gzzs0q { .rmxc-gzzs0q {
+  width: 100%;
+} }</style><style data-rmx="rmxc-d2dnz2">@layer rmx.rmxc-d2dnz2 { .rmxc-d2dnz2 {
+  display: flex;
+  flex-direction: column;
+  outline: none;
+  user-select: none;
+  -webkit-user-select: none;
+  --rmx-ui-item-inset: var(--rmx-space-sm);
+  --rmx-ui-item-indicator-gap: var(--rmx-space-xs);
+  --rmx-ui-item-indicator-width: var(--rmx-font-size-sm);
+} }</style><style data-rmx="rmxc-vgm8um">@layer rmx.rmxc-vgm8um { .rmxc-vgm8um {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  align-items: center;
+  width: 100%;
+  min-height: var(--rmx-control-height-md);
+  padding: var(--rmx-space-xs) var(--rmx-space-sm);
+  border-radius: var(--rmx-radius-md);
+  background-color: transparent;
+  color: var(--rmx-color-text-primary);
+  font-family: var(--rmx-font-family-sans);
+  font-size: var(--rmx-font-size-sm);
+  font-weight: var(--rmx-font-weight-normal);
+  line-height: var(--rmx-line-height-normal);
+  text-align: left;
+  user-select: none;
+  -webkit-user-select: none;
+  scroll-margin-block: var(--rmx-space-xs);
+  --rmx-listbox-option-indicator-opacity: 0;
+  &:focus {
+    outline: none;
+  }
+  &[data-highlighted="true"] {
+    background-color: var(--rmx-color-action-primary-background);
+    color: var(--rmx-color-action-primary-foreground);
+  }
+  &[aria-disabled="true"] {
+    opacity: 0.5;
+  }
+  &[hidden] {
+    display: none;
+  }
+  &[data-listbox-flash="true"], &[data-select-flash="true"], &[data-combobox-flash="true"] {
+    background-color: transparent;
+    color: var(--rmx-color-text-primary);
+  }
+  &[aria-selected="true"] {
+    --rmx-listbox-option-indicator-opacity: 1;
+  }
+} }</style><style data-rmx="rmxc-vtayqe">@layer rmx.rmxc-vtayqe { .rmxc-vtayqe {
+  grid-column: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+  color: currentColor;
+  flex-shrink: 0;
+  opacity: var(--rmx-listbox-option-indicator-opacity);
+  & > svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+} }</style><style data-rmx="rmxc-vtco96">@layer rmx.rmxc-vtco96 { .rmxc-vtco96 {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+  padding-inline: var(--rmx-space-xs);
+  -webkit-user-select: none;
+} }</style><style data-rmx="rmxc-hyckuh">@layer rmx.rmxc-hyckuh { .rmxc-hyckuh {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: var(--rmx-space-xs);
+} }</style><style data-rmx="rmxc-6lftcu">@layer rmx.rmxc-6lftcu { .rmxc-6lftcu {
+  background-color: transparent;
+  background-image: none;
+  color: var(--rmx-color-text-secondary);
+  border: 0.5px solid transparent;
+  box-shadow: none;
+  &:hover {
+    background-color: var(--rmx-surface-lvl3);
+    color: var(--rmx-color-text-primary);
+  }
+  &:active {
+    background-color: color-mix(in oklab, var(--rmx-surface-lvl3) 94%, black);
+    color: color-mix(in oklab, var(--rmx-color-text-primary) 94%, black);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--rmx-color-focus-ring);
+    outline-offset: 2px;
+    background-color: var(--rmx-surface-lvl3);
+    color: var(--rmx-color-text-primary);
+  }
+  &:disabled {
+    opacity: 0.6;
+  }
+} }</style><style data-rmx="rmxc-x7y7ai">@layer rmx.rmxc-x7y7ai { .rmxc-x7y7ai {
+  padding: var(--rmx-space-md);
+  border-top: 1px solid var(--rmx-color-border-subtle);
+  background-color: color-mix(in oklab, rgb(248 248 248) 76%, white);
+  overflow-x: auto;
+} }</style><style data-rmx="rmxc-4y890f">@layer rmx.rmxc-4y890f { .rmxc-4y890f {
+  display: block;
+  margin: 0;
+  font-family: var(--rmx-font-family-mono);
+  font-size: var(--rmx-font-size-xs);
+  line-height: var(--rmx-line-height-normal);
+  color: var(--rmx-color-text-secondary);
+  min-width: max-content;
+  white-space: pre;
+} }</style></head><div class="rmxc-sqiqrr"><div class="rmxc-v71maw"><h3 class="rmxc-am4t5">Popover overview</h3><p class="rmxc-jgmsmy">Use the low-level popover primitive for anchored, dismissible panels like filters, inspectors, and view options.</p></div><article class="rmxc-o45anh"><div class="rmxc-ifw9rx"><div class="rmxc-sn9csc"><!-- rmx:h:h748f0eb2 --><div class="rmxc-yuxxlg"><button type="button" class="rmxc-ksev4u rmxc-q1stkb"><span class="rmxc-pmh8mc">View options</span><span aria-hidden class="rmxc-scxg5a"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#rmx-glyph-chevronDown"></use></svg></span></button></div><div class="rmxc-3ghnya rmxc-7prw8y" popover="manual"><div class="rmxc-csveyg rmxc-cy1ot9"><div class="rmxc-rhfm45"><label for="h748f0eb2-grouping" class="rmxc-oze8qd">Grouping</label><button id="h748f0eb2-grouping" type="button" class="rmxc-ksev4u rmxc-1ntvn4 rmxc-gzzs0q" aria-haspopup="listbox" aria-expanded="false" aria-controls="s23611c65-6-list"><span class="rmxc-pmh8mc">No grouping</span><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-scxg5a"><use xlink:href="#rmx-glyph-chevronVertical"></use></svg></button><div class="rmxc-3ghnya rmxc-7prw8y" popover="manual"><div class="rmxc-csveyg rmxc-d2dnz2" id="s23611c65-6-list" tabindex="-1" role="listbox"><div class="rmxc-vgm8um" role="option" id="ssr-mixin" aria-selected="true" aria-disabled="false" data-highlighted="true"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-vtayqe"><use xlink:href="#rmx-glyph-check"></use></svg><span class="rmxc-vtco96">No grouping</span></div><div class="rmxc-vgm8um" role="option" id="ssr-mixin" aria-selected="false" aria-disabled="false" data-highlighted="false"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-vtayqe"><use xlink:href="#rmx-glyph-check"></use></svg><span class="rmxc-vtco96">Status</span></div><div class="rmxc-vgm8um" role="option" id="ssr-mixin" aria-selected="false" aria-disabled="false" data-highlighted="false"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-vtayqe"><use xlink:href="#rmx-glyph-check"></use></svg><span class="rmxc-vtco96">Priority</span></div></div></div></div><div class="rmxc-rhfm45"><label for="h748f0eb2-ordering" class="rmxc-oze8qd">Ordering</label><button id="h748f0eb2-ordering" type="button" class="rmxc-ksev4u rmxc-1ntvn4 rmxc-gzzs0q" aria-haspopup="listbox" aria-expanded="false" aria-controls="s23611c65-7-list"><span class="rmxc-pmh8mc">Manual</span><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-scxg5a"><use xlink:href="#rmx-glyph-chevronVertical"></use></svg></button><div class="rmxc-3ghnya rmxc-7prw8y" popover="manual"><div class="rmxc-csveyg rmxc-d2dnz2" id="s23611c65-7-list" tabindex="-1" role="listbox"><div class="rmxc-vgm8um" role="option" id="ssr-mixin" aria-selected="true" aria-disabled="false" data-highlighted="true"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-vtayqe"><use xlink:href="#rmx-glyph-check"></use></svg><span class="rmxc-vtco96">Manual</span></div><div class="rmxc-vgm8um" role="option" id="ssr-mixin" aria-selected="false" aria-disabled="false" data-highlighted="false"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-vtayqe"><use xlink:href="#rmx-glyph-check"></use></svg><span class="rmxc-vtco96">Newest first</span></div><div class="rmxc-vgm8um" role="option" id="ssr-mixin" aria-selected="false" aria-disabled="false" data-highlighted="false"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-vtayqe"><use xlink:href="#rmx-glyph-check"></use></svg><span class="rmxc-vtco96">Oldest first</span></div></div></div></div><div class="rmxc-rhfm45"><label for="h748f0eb2-closed-projects" class="rmxc-oze8qd">Show closed projects</label><button id="h748f0eb2-closed-projects" type="button" class="rmxc-ksev4u rmxc-1ntvn4 rmxc-gzzs0q" aria-haspopup="listbox" aria-expanded="false" aria-controls="s23611c65-8-list"><span class="rmxc-pmh8mc">All</span><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-scxg5a"><use xlink:href="#rmx-glyph-chevronVertical"></use></svg></button><div class="rmxc-3ghnya rmxc-7prw8y" popover="manual"><div class="rmxc-csveyg rmxc-d2dnz2" id="s23611c65-8-list" tabindex="-1" role="listbox"><div class="rmxc-vgm8um" role="option" id="ssr-mixin" aria-selected="true" aria-disabled="false" data-highlighted="true"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-vtayqe"><use xlink:href="#rmx-glyph-check"></use></svg><span class="rmxc-vtco96">All</span></div><div class="rmxc-vgm8um" role="option" id="ssr-mixin" aria-selected="false" aria-disabled="false" data-highlighted="false"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-vtayqe"><use xlink:href="#rmx-glyph-check"></use></svg><span class="rmxc-vtco96">Open only</span></div><div class="rmxc-vgm8um" role="option" id="ssr-mixin" aria-selected="false" aria-disabled="false" data-highlighted="false"><svg aria-hidden fill="none" xmlns="http://www.w3.org/2000/svg" class="rmxc-vtayqe"><use xlink:href="#rmx-glyph-check"></use></svg><span class="rmxc-vtco96">Closed only</span></div></div></div></div><div class="rmxc-hyckuh"><button type="button" class="rmxc-ksev4u rmxc-6lftcu"><span class="rmxc-pmh8mc">Done</span></button></div></div></div><!-- /rmx:h --></div></div><div class="rmxc-x7y7ai"><code class="rmxc-4y890f">import { css, on, type Handle } from 'remix/ui'
+import { Button } from '@remix-run/ui/button'
+import { Glyph } from '@remix-run/ui/glyph'
+import * as popover from '@remix-run/ui/popover'
+import { Option, Select } from '@remix-run/ui/select'
+import { theme } from '@remix-run/ui/theme'
+
+export default function Example(handle: Handle) {
+  let open = false
+
+  function closePopover() {
+    open = false
+    void handle.update()
+  }
+
+  return () =&gt; (
+    &lt;popover.Context&gt;
+      &lt;div mix={buttonRowCss}&gt;
+        &lt;Button
+          endIcon={&lt;Glyph name="chevronDown" /&gt;}
+          mix={[
+            popover.anchor({ placement: 'bottom' }),
+            popover.focusOnHide(),
+            on('click', () =&gt; {
+              open = !open
+              void handle.update()
+            }),
+          ]}
+          tone="secondary"
+        &gt;
+          View options
+        &lt;/Button&gt;
+      &lt;/div&gt;
+
+      &lt;div
+        mix={[
+          popover.surfaceStyle,
+          popover.surface({
+            closeOnAnchorClick: false,
+            open,
+            onHide() {
+              closePopover()
+            },
+          }),
+        ]}
+      &gt;
+        &lt;div mix={[popover.contentStyle, panelCss]}&gt;
+          &lt;div mix={fieldCss}&gt;
+            &lt;label for={`${handle.id}-grouping`} mix={labelCss}&gt;
+              Grouping
+            &lt;/label&gt;
+            &lt;Select
+              id={`${handle.id}-grouping`}
+              defaultLabel="No grouping"
+              defaultValue="none"
+              mix={[fieldSelectCss, popover.focusOnShow()]}
+            &gt;
+              &lt;Option label="No grouping" value="none" /&gt;
+              &lt;Option label="Status" value="status" /&gt;
+              &lt;Option label="Priority" value="priority" /&gt;
+            &lt;/Select&gt;
+          &lt;/div&gt;
+
+          &lt;div mix={fieldCss}&gt;
+            &lt;label for={`${handle.id}-ordering`} mix={labelCss}&gt;
+              Ordering
+            &lt;/label&gt;
+            &lt;Select
+              id={`${handle.id}-ordering`}
+              defaultLabel="Manual"
+              defaultValue="manual"
+              mix={fieldSelectCss}
+            &gt;
+              &lt;Option label="Manual" value="manual" /&gt;
+              &lt;Option label="Newest first" value="newest" /&gt;
+              &lt;Option label="Oldest first" value="oldest" /&gt;
+            &lt;/Select&gt;
+          &lt;/div&gt;
+
+          &lt;div mix={fieldCss}&gt;
+            &lt;label for={`${handle.id}-closed-projects`} mix={labelCss}&gt;
+              Show closed projects
+            &lt;/label&gt;
+            &lt;Select
+              id={`${handle.id}-closed-projects`}
+              defaultLabel="All"
+              defaultValue="all"
+              mix={fieldSelectCss}
+            &gt;
+              &lt;Option label="All" value="all" /&gt;
+              &lt;Option label="Open only" value="open" /&gt;
+              &lt;Option label="Closed only" value="closed" /&gt;
+            &lt;/Select&gt;
+          &lt;/div&gt;
+
+          &lt;div mix={actionsCss}&gt;
+            &lt;Button mix={on('click', closePopover)} tone="ghost"&gt;
+              Done
+            &lt;/Button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/popover.Context&gt;
+  )
+}
+
+let buttonRowCss = css({
+  display: 'flex',
+  justifyContent: 'flex-start',
+})
+
+let panelCss = css({
+  display: 'grid',
+  gap: theme.space.md,
+  width: '22rem',
+  padding: theme.space.lg,
+})
+
+let fieldCss = css({
+  display: 'grid',
+  gap: theme.space.px,
+})
+
+let labelCss = css({
+  margin: 0,
+  fontSize: theme.fontSize.xs,
+  fontWeight: theme.fontWeight.semibold,
+  color: theme.colors.text.primary,
+})
+
+let fieldSelectCss = css({
+  width: '100%',
+})
+
+let actionsCss = css({
+  display: 'flex',
+  justifyContent: 'flex-end',
+  paddingTop: theme.space.xs,
+})
+</code></div></article></div><script type="application/json" id="rmx-data">{"h":{"h748f0eb2":{"exportName":"default","moduleUrl":"/assets/examples/components/popover-overview.js","props":{}}}}</script><!-- /rmx:f --></main><script type="application/json" id="rmx-data">{"f":{"f4179f164":{"status":"resolved","src":"/examples/popover-overview/content?standalone=1"}}}</script></body></html>
