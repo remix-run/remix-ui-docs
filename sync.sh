@@ -9,3 +9,5 @@ rm -rf docs/
 pushd ../remix/packages/ui/demo
 pnpm run prerender --dir "../../../../remix-ui-docs/docs"
 popd
+
+touch docs/.nojekyll
