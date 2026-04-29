@@ -7,5 +7,5 @@ set -e
 rm -rf docs/
 
 pushd ../remix/packages/ui/demo
-pnpm run prerender --dir "../../remix-ui-docs/docs"
+pnpm run prerender --dir "../../../../remix-ui-docs/docs"
 popd
