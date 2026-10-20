@@ -1,0 +1,87 @@
+name: Deploy Remix UI docs
+
+on:
+  push:
+    branches: [main]
+  repository_dispatch:
+    types: [update-ui]
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: Remix branch, tag, or commit to deploy
+        required: true
+        default: main
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build UI docs
+    permissions:
+      contents: read
+      pages: read
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Remix
+        uses: actions/checkout@v6
+        with:
+          repository: remix-run/remix
+          path: remix
+          ref: ${{ github.event.client_payload.ref || inputs.ref || 'main' }}
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+          cache-dependency-path: remix/pnpm-lock.yaml
+
+      - name: Install Remix dependencies
+        working-directory: remix
+        run: pnpm install --frozen-lockfile
+
+      - name: Read Remix commit
+        id: remix
+        working-directory: remix
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Configure GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v6
+
+      - name: Prerender UI docs
+        working-directory: remix
+        env:
+          GITHUB_SHA: ${{ steps.remix.outputs.sha }}
+        run: pnpm --filter remix-ui-docs run prerender
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: remix/docs/ui/build/site
+
+  deploy:
+    name: Deploy UI docs
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
